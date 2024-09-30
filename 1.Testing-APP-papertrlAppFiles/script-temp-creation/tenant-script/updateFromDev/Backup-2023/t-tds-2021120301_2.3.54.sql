@@ -1,0 +1,1 @@
+DELETE FROM umm_role_previlege WHERE privilege_id in (1042,444,445,446,447,448,449,450,451);

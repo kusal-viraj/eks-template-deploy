@@ -1,0 +1,29 @@
+---------------NIron---Hashila-----------2.1.55-------------
+
+INSERT INTO `umm_menu` (`id`, `name`, `display_text`, `menu_style`, `url`, `tab`, `type`, `super_type`, `super_type_2`, `department`, `menu_order`, `display_icon`, `short_name`, `detail_text`, `status`, `portal_menu`, `individual_tenant_menu`, `vendor_community_menu`, `version`, `auth_code`, `slim_menu`, `created_by`, `created_on`, `update_by`, `update_on`, `delete_by`, `delete_on`, `hierachy`) VALUES (1015, 'Payment Providers', 'Payment Providers', 'fa fa-address-card', 'payment-providers', '', 'S', 1002, NULL, 'Admin', 0, ' fa fa-address-card', 'Payment Providers', 'Payment Providers', 'A', 0, 1, 0, 'V2', 'PAYMENT_PROVIDERS', 1, 'System', '2021-08-13 09:03:26', NULL, NULL, NULL, NULL, '1002');
+
+INSERT INTO `umm_menu_privilage` (`id`, `menu_id`, `privilage_id`, `auth_code`, `created_by`, `created_on`, `update_by`, `update_on`, `delete_by`, `delete_on`) VALUES (38, 1015, 1, 'PAYMENT_PROVIDER_CREATE', 'Syatem', '2021-08-13 09:55:06', NULL, NULL, NULL, NULL);
+INSERT INTO `umm_menu_privilage` (`id`, `menu_id`, `privilage_id`, `auth_code`, `created_by`, `created_on`, `update_by`, `update_on`, `delete_by`, `delete_on`) VALUES (39, 1015, 2, 'PAYMENT_PROVIDER_SEARCH', 'Syatem', '2021-08-13 09:55:33', NULL, NULL, NULL, NULL);
+INSERT INTO `umm_menu_privilage` (`id`, `menu_id`, `privilage_id`, `auth_code`, `created_by`, `created_on`, `update_by`, `update_on`, `delete_by`, `delete_on`) VALUES (40, 1015, 14, 'PAYMENT_PROVIDER_ACTIVATE', 'System', '2021-08-13 09:56:15', NULL, NULL, NULL, NULL);
+INSERT INTO `umm_menu_privilage` (`id`, `menu_id`, `privilage_id`, `auth_code`, `created_by`, `created_on`, `update_by`, `update_on`, `delete_by`, `delete_on`) VALUES (41, 1015, 13, 'PAYMENT_PROVIDER_INACTIVATE', 'System', '2021-08-13 09:56:42', NULL, NULL, NULL, NULL);
+INSERT INTO `umm_menu_privilage` (`id`, `menu_id`, `privilage_id`, `auth_code`, `created_by`, `created_on`, `update_by`, `update_on`, `delete_by`, `delete_on`) VALUES (42, 1015, 4, 'PAYMENT_PROVIDER_EDIT', 'System', '2021-08-13 09:57:06', NULL, NULL, NULL, NULL);
+
+UPDATE `common_drop_down_value` SET `value` = 'I', `label` = 'Inactive' WHERE `id` = 3;
+
+INSERT INTO `common_grid_template` (`id`, `grid_name`) VALUES (12, 'PAYMENT_PROVIDER_LIST');
+
+INSERT INTO `common_grid_filter_template` (`id`, `grid_id`, `drop_down_id`, `field`, `header`, `search_type`) VALUES (6, 12, NULL, 'name', 'Payment Provider', 'input');
+INSERT INTO `common_grid_filter_template` (`id`, `grid_id`, `drop_down_id`, `field`, `header`, `search_type`) VALUES (7, 12, NULL, 'description', 'Description', 'input');
+INSERT INTO `common_grid_filter_template` (`id`, `grid_id`, `drop_down_id`, `field`, `header`, `search_type`) VALUES (8, 12, 2, 'status', 'Status', 'dropdown');
+INSERT INTO `common_grid_filter_template` (`id`, `grid_id`, `drop_down_id`, `field`, `header`, `search_type`) VALUES (9, 12, NULL, 'createdBy', 'Created User', 'input');
+INSERT INTO `common_grid_filter_template` (`id`, `grid_id`, `drop_down_id`, `field`, `header`, `search_type`) VALUES (10, 12, NULL, 'createdOn', 'Created Date', 'date');
+
+INSERT INTO `common_grid_state_template` (`id`, `grid_id`, `start_from`, `total_rows`, `column_widths`) VALUES (11, 12, 0, 15, '100,210,210,210,210,210,210');
+
+INSERT INTO `common_grid_column_template` (`id`, `grid_id`, `field`, `header`, `column_show`, `is_sortable`, `is_re_orderable`, `is_re_sizable`, `can_hide`, `align`, `search_type`, `placeholder`, `column_order`, `drop_down_id`, `drop_down_url`) VALUES (64, 12, 'pay.name', 'Payment Provider', 1, 1, 1, 1, 1, 'left', 'input', 'Payment Type', 2, NULL, '');
+INSERT INTO `common_grid_column_template` (`id`, `grid_id`, `field`, `header`, `column_show`, `is_sortable`, `is_re_orderable`, `is_re_sizable`, `can_hide`, `align`, `search_type`, `placeholder`, `column_order`, `drop_down_id`, `drop_down_url`) VALUES (65, 12, 'action', 'Action', 1, 0, 0, 0, 0, 'center', 'actionButton', '', 1, NULL, '');
+INSERT INTO `common_grid_column_template` (`id`, `grid_id`, `field`, `header`, `column_show`, `is_sortable`, `is_re_orderable`, `is_re_sizable`, `can_hide`, `align`, `search_type`, `placeholder`, `column_order`, `drop_down_id`, `drop_down_url`) VALUES (66, 12, 'pay.description', 'Description', 1, 1, 1, 1, 1, 'left', 'input', 'Description', 3, NULL, '');
+INSERT INTO `common_grid_column_template` (`id`, `grid_id`, `field`, `header`, `column_show`, `is_sortable`, `is_re_orderable`, `is_re_sizable`, `can_hide`, `align`, `search_type`, `placeholder`, `column_order`, `drop_down_id`, `drop_down_url`) VALUES (67, 12, 'pay.status', 'Status', 1, 1, 1, 1, 1, 'center', 'dropdown', 'Status', 4, 2, '');
+INSERT INTO `common_grid_column_template` (`id`, `grid_id`, `field`, `header`, `column_show`, `is_sortable`, `is_re_orderable`, `is_re_sizable`, `can_hide`, `align`, `search_type`, `placeholder`, `column_order`, `drop_down_id`, `drop_down_url`) VALUES (68, 12, 'pay.createdOn', 'Created Date', 1, 1, 1, 1, 1, 'center', 'date', 'Created Date', 5, NULL, '');
+INSERT INTO `common_grid_column_template` (`id`, `grid_id`, `field`, `header`, `column_show`, `is_sortable`, `is_re_orderable`, `is_re_sizable`, `can_hide`, `align`, `search_type`, `placeholder`, `column_order`, `drop_down_id`, `drop_down_url`) VALUES (69, 12, 'pay.createdBy', 'Created User', 1, 1, 1, 1, 1, 'left', 'input', 'Created User', 6, NULL, '');
+INSERT INTO `common_grid_column_template` (`id`, `grid_id`, `field`, `header`, `column_show`, `is_sortable`, `is_re_orderable`, `is_re_sizable`, `can_hide`, `align`, `search_type`, `placeholder`, `column_order`, `drop_down_id`, `drop_down_url`) VALUES (70, 12, 'type.paymentType', 'Payment Types', 1, 1, 1, 1, 1, 'left', 'multiSelect', 'Payment Types', 7, NULL, '');

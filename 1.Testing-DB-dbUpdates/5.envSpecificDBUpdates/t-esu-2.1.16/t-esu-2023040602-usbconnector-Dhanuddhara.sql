@@ -1,0 +1,1 @@
+UPDATE `payment_provider_for_customer` SET `company_id` = '787495989999', `tenant` = 10128, `tenant_id` = 'testing-app10128', `days_for_cancel` = NULL, `hours_for_cancel` = NULL, `minutes_for_cancel` = NULL, `status` = 'A', `created_by` = 'support', `created_on` = '2023-04-06 12:25:21', `update_by` = NULL, `update_on` = NULL, `delete_by` = NULL, `delete_on` = NULL WHERE `id` = 2;

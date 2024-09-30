@@ -1,0 +1,1 @@
+DELETE  FROM `payment_customer_wise_config_value` WHERE tenant_id = 'testing-app10128';

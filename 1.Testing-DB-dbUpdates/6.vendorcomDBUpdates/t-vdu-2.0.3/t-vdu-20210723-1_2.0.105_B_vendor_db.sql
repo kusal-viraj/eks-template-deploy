@@ -1,0 +1,1 @@
+UPDATE vendor_audit_trial_status SET `name`='Revert back to' WHERE  `id`=9;

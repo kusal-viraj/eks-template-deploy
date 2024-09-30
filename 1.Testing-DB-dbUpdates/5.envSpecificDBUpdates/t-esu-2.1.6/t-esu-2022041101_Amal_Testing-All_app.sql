@@ -1,0 +1,1 @@
+DELETE FROM common_grid_column_template WHERE id=493;

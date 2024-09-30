@@ -1,0 +1,7 @@
+INSERT INTO `vendor_menu_privilage`(`id`, `menu_id`, `prililage_id`, `auth_code`, `created_by`, `created_on`, `update_by`, `update_on`, `delete_by`, `delete_on`) VALUES (179, 1009, 46, 'INVOICE_DOWNLOAD_INVOICE', 'System', '2021-05-25 22:53:03', NULL, NULL, NULL, NULL);
+INSERT INTO `vendor_menu_privilage`(`id`, `menu_id`, `prililage_id`, `auth_code`, `created_by`, `created_on`, `update_by`, `update_on`, `delete_by`, `delete_on`) VALUES (180, 1009, 5, 'INVOICE_DELETE', 'System', '2021-05-25 22:53:59', NULL, NULL, NULL, NULL);
+INSERT INTO `vendor_menu_privilage`(`id`, `menu_id`, `prililage_id`, `auth_code`, `created_by`, `created_on`, `update_by`, `update_on`, `delete_by`, `delete_on`) VALUES (181, 1009, 47, 'INVOICE_CSV_EXPORT', 'System', '2021-05-25 23:02:36', NULL, NULL, NULL, NULL);
+
+INSERT INTO `vendor_role_previlege`( `role_id`, `privilege_id`, `sub_account_id`, `created_by`, `created_on`, `update_by`, `update_on`, `delete_by`, `delete_on`) VALUES ( 1, 179, NULL, 'bemaje4477@geekale.com', '2021-05-25 13:41:30', NULL, NULL, NULL, NULL);
+INSERT INTO `vendor_role_previlege`( `role_id`, `privilege_id`, `sub_account_id`, `created_by`, `created_on`, `update_by`, `update_on`, `delete_by`, `delete_on`) VALUES ( 1, 180, NULL, 'bemaje4477@geekale.com', '2021-05-25 13:41:30', NULL, NULL, NULL, NULL);
+INSERT INTO `vendor_role_previlege`( `role_id`, `privilege_id`, `sub_account_id`, `created_by`, `created_on`, `update_by`, `update_on`, `delete_by`, `delete_on`) VALUES ( 1, 181, NULL, 'bemaje4477@geekale.com', '2021-05-25 13:41:30', NULL, NULL, NULL, NULL);

@@ -1,0 +1,11 @@
+DELETE FROM `umm_role_previlege` WHERE `privilege_id` = 81;
+DELETE FROM `umm_role_previlege` WHERE `privilege_id` = 401;
+DELETE FROM `umm_role_previlege` WHERE `privilege_id` = 404;
+DELETE FROM `umm_role_previlege` WHERE `privilege_id` = 405;
+DELETE FROM `umm_role_previlege` WHERE `privilege_id` = 407;
+DELETE FROM `umm_role_previlege` WHERE `privilege_id` = 423;
+DELETE FROM `umm_role_previlege` WHERE `privilege_id` = 485;
+DELETE FROM `umm_role_previlege` WHERE `privilege_id` = 406;
+DELETE FROM `umm_role_previlege` WHERE `privilege_id` = 408;
+DELETE FROM `umm_role_previlege` WHERE `privilege_id` = 424;
+DELETE FROM `umm_role_previlege` WHERE `privilege_id` = 83;

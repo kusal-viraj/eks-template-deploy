@@ -1,0 +1,1 @@
+UPDATE vp_bank_payment_type SET ach_file_prefix = "6098 H88888888057"  WHERE id = 346;

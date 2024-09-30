@@ -1,0 +1,1 @@
+Delete FROM `payment_transaction`;

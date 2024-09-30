@@ -1,0 +1,32 @@
+---------------2.3.131---------Danuddra---------------
+
+
+INSERT INTO `common_integration_system_service`(`system_id`, `service_id`) VALUES (5, 1);
+INSERT INTO `common_integration_system_service`(`system_id`, `service_id`) VALUES (5, 2);
+INSERT INTO `common_integration_system_service`(`system_id`, `service_id`) VALUES (5, 3);
+INSERT INTO `common_integration_system_service`(`system_id`, `service_id`) VALUES (5, 4);
+INSERT INTO `common_integration_system_service`(`system_id`, `service_id`) VALUES (5, 5);
+INSERT INTO `common_integration_system_service`(`system_id`, `service_id`) VALUES (5, 6);
+INSERT INTO `common_integration_system_service`(`system_id`, `service_id`) VALUES (5, 7);
+INSERT INTO `common_integration_system_service`(`system_id`, `service_id`) VALUES (5, 8);
+INSERT INTO `common_integration_system_service`(`system_id`, `service_id`) VALUES (5, 9);
+INSERT INTO `common_integration_system_service`(`system_id`, `service_id`) VALUES (5, 10);
+INSERT INTO `common_integration_system_service`(`system_id`, `service_id`) VALUES (5, 11);
+INSERT INTO `common_integration_system_service`(`system_id`, `service_id`) VALUES (5, 12);
+INSERT INTO `common_integration_system_service`(`system_id`, `service_id`) VALUES (5, 13);
+INSERT INTO `common_integration_system_service`(`system_id`, `service_id`) VALUES (5, 14);
+INSERT INTO `common_integration_system_service`(`system_id`, `service_id`) VALUES (5, 15);
+INSERT INTO `common_integration_system_service`(`system_id`, `service_id`) VALUES (5, 16);
+INSERT INTO `common_integration_system_service`(`system_id`, `service_id`) VALUES (5, 17);
+INSERT INTO `common_integration_system_service`(`system_id`, `service_id`) VALUES (5, 18);
+INSERT INTO `common_integration_system_service`(`system_id`, `service_id`) VALUES (5, 19);
+INSERT INTO `common_integration_system_service`(`system_id`, `service_id`) VALUES (5, 20);
+INSERT INTO `common_integration_system_service`(`system_id`, `service_id`) VALUES (5, 21);
+INSERT INTO `common_integration_system_service`(`system_id`, `service_id`) VALUES (5, 22);
+INSERT INTO `common_integration_system_service`(`system_id`, `service_id`) VALUES (5, 23);
+INSERT INTO `common_integration_system_service`(`system_id`, `service_id`) VALUES (5, 24);
+INSERT INTO `common_integration_system_service`(`system_id`, `service_id`) VALUES (5, 25);
+INSERT INTO `common_integration_system_service`(`system_id`, `service_id`) VALUES (5, 26);
+INSERT INTO `common_integration_system_service`(`system_id`, `service_id`) VALUES (5, 27);
+INSERT INTO `common_integration_system_service`(`system_id`, `service_id`) VALUES (5, 28);
+INSERT INTO `common_integration_system_service`(`system_id`, `service_id`) VALUES (5, 29);

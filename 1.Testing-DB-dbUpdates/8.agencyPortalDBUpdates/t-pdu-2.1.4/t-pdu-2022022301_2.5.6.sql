@@ -1,0 +1,3 @@
+-------Amal-----2.5.6--------
+
+UPDATE `umm_privilages` SET `url`='Email To Vendor', `text`='Email To Vendor' WHERE  `id`=118;

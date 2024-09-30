@@ -1,0 +1,5 @@
+delete from common_grid_column_user_wice;
+
+delete from common_grid_state_user_wice;
+
+UPDATE `common_grid_column_template` SET `id`='270', `grid_id`='26', `field`='discount.applicableDiscountAmount', `header`='Applicable Discount Amount', `column_show`='1', `is_sortable`='1', `is_re_orderable`='1', `is_re_sizable`='1', `can_hide`='1', `align`='right', `search_type`='numeric', `placeholder`='Applicable Discount Amount', `column_order`='5', `drop_down_id`=NULL, `drop_down_url`='' WHERE (`id`='270');

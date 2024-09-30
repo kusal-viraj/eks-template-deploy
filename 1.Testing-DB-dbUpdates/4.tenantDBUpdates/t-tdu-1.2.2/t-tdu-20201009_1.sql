@@ -1,0 +1,1 @@
+ALTER TABLE `vp_invoice_payment_distribution`CHANGE COLUMN `id` `id` INT(11) NOT NULL AUTO_INCREMENT FIRST;

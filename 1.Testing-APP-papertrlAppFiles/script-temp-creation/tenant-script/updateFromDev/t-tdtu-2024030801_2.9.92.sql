@@ -1,0 +1,1 @@
+DELETE FROM umm_privilages WHERE id =155;

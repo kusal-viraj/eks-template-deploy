@@ -1,0 +1,7 @@
+--------Amal-------2.2.99----------
+
+INSERT INTO `umm_role_previlege` (`role_id`, `privilege_id`, `sub_account_id`, `created_by`, `created_on`, `update_by`, `update_on`, `delete_by`, `delete_on`) VALUES (1, 1035, NULL, 'bhagya.e@papertrl.com', '2021-03-29 22:43:59', NULL, NULL, NULL, NULL);
+INSERT INTO `umm_role_previlege` (`role_id`, `privilege_id`, `sub_account_id`, `created_by`, `created_on`, `update_by`, `update_on`, `delete_by`, `delete_on`) VALUES (1, 1037, NULL, 'bhagya.e@papertrl.com', '2021-03-29 22:43:59', NULL, NULL, NULL, NULL);
+INSERT INTO `umm_role_previlege` (`role_id`, `privilege_id`, `sub_account_id`, `created_by`, `created_on`, `update_by`, `update_on`, `delete_by`, `delete_on`) VALUES (1, 1038, NULL, 'bhagya.e@papertrl.com', '2021-03-29 22:43:59', NULL, NULL, NULL, NULL);
+INSERT INTO `umm_role_previlege` (`role_id`, `privilege_id`, `sub_account_id`, `created_by`, `created_on`, `update_by`, `update_on`, `delete_by`, `delete_on`) VALUES (1, 1039, NULL, 'bhagya.e@papertrl.com', '2021-03-29 22:43:59', NULL, NULL, NULL, NULL);
+INSERT INTO `umm_role_previlege` (`role_id`, `privilege_id`, `sub_account_id`, `created_by`, `created_on`, `update_by`, `update_on`, `delete_by`, `delete_on`) VALUES (1, 1040, NULL, 'bhagya.e@papertrl.com', '2021-03-29 22:43:59', NULL, NULL, NULL, NULL);

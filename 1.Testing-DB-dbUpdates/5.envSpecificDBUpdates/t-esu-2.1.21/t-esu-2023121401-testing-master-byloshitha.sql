@@ -1,0 +1,1 @@
+UPDATE papertrl_master_tenant SET sftp_server_id=1 WHERE  tenant_id = 'testing-vendors';

@@ -1,0 +1,4 @@
+-----------loshitha-----2.8.1-----
+
+INSERT INTO `umm_privilages`(`id`, `url`, `text`, `auth_code`, `created_by`, `created_on`, `update_by`, `update_on`, `delete_by`, `delete_on`) VALUES (139, 'View All Expense Reports', 'View All Expense Reports', 'VIEW_ALL_EXPENSE_REPORTS', 'System', '2022-11-11 12:04:15', NULL, NULL, NULL, NULL);
+INSERT INTO `umm_menu_privilage`(`id`, `menu_id`, `privilage_id`, `auth_code`, `created_by`, `created_on`, `update_by`, `update_on`, `delete_by`, `delete_on`) VALUES (520, 1051, 139, 'VIEW_ALL_EXPENSE_REPORTS', 'System', '2022-11-11 12:08:46', NULL, NULL, NULL, NULL);

@@ -1,0 +1,1 @@
+INSERT INTO `payment_type_for_provider`(`id`, `status`, `short_code`, `payment_type`, `provider_credential_id`) VALUES (8, 'A', 'DCard', 10, 1);

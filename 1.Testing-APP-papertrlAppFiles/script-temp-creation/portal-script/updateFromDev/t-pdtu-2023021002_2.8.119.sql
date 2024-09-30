@@ -1,0 +1,1 @@
+UPDATE common_grid_column_template SET is_re_orderable = 0;

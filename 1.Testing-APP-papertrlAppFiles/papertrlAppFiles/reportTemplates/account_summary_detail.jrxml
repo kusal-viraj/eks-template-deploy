@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.8.0.final using JasperReports Library version 6.8.0-2ed8dfabb690ff337a5797129f2cd92902b0c87b  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="account_summary_detail" pageWidth="595" pageHeight="842" whenNoDataType="NoDataSection" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="a80abbc5-ced0-4712-8e57-7bd69c6508de">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Account Wise Expense Summary.xml"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="accountNumber" class="java.lang.String">
+		<fieldDescription><![CDATA[accountNumber]]></fieldDescription>
+	</field>
+	<field name="accountDescription" class="java.lang.String">
+		<fieldDescription><![CDATA[accountDescription]]></fieldDescription>
+	</field>
+	<field name="category" class="java.lang.String">
+		<fieldDescription><![CDATA[category]]></fieldDescription>
+	</field>
+	<field name="amount" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[amount]]></fieldDescription>
+	</field>
+	<variable name="AMOUNT_TOTAL" class="java.math.BigDecimal" resetType="Group" resetGroup="accountGroup" calculation="Sum">
+		<variableExpression><![CDATA[$F{amount}]]></variableExpression>
+		<initialValueExpression><![CDATA[$F{amount}]]></initialValueExpression>
+	</variable>
+	<group name="accountGroup">
+		<groupExpression><![CDATA[$F{accountNumber}]]></groupExpression>
+		<groupHeader>
+			<band/>
+		</groupHeader>
+	</group>
+	<group name="Group1">
+		<groupExpression><![CDATA[$F{accountNumber}.concat($F{category})]]></groupExpression>
+		<groupFooter>
+			<band height="15">
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement stretchType="RelativeToTallestObject" x="1" y="0" width="117" height="15" uuid="d4080637-6f2a-4bc4-969d-69c41fabf394"/>
+					<box padding="2">
+						<pen lineWidth="0.25" lineColor="#999999"/>
+					</box>
+					<textElement verticalAlignment="Middle">
+						<font size="7"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{accountNumber}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement stretchType="RelativeToTallestObject" x="118" y="0" width="140" height="15" uuid="6e1a26a6-9052-474d-aaf9-2f53b41ca25d">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<box padding="2">
+						<pen lineWidth="0.25" lineColor="#999999"/>
+					</box>
+					<textElement verticalAlignment="Middle">
+						<font size="7"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{accountDescription}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement stretchType="RelativeToTallestObject" x="258" y="0" width="152" height="15" uuid="1fe6803d-27a5-4925-b7c0-6e28f0593ef8"/>
+					<box padding="2">
+						<pen lineWidth="0.25" lineColor="#999999"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="7"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{category}]]></textFieldExpression>
+				</textField>
+				<textField pattern="#,##0.00" isBlankWhenNull="true">
+					<reportElement x="410" y="0" width="140" height="15" uuid="9213e78c-200c-4fe5-84b9-21e19f3be2ba">
+						<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+					</reportElement>
+					<box>
+						<pen lineWidth="0.25" lineColor="#999999"/>
+					</box>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font size="7"/>
+						<paragraph rightIndent="3"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{AMOUNT_TOTAL}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupFooter>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="70" splitType="Stretch">
+			<staticText>
+				<reportElement x="165" y="10" width="230" height="20" forecolor="#000000" uuid="75aaedbb-4f7c-46c2-b534-a5e456e3aac6"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="15" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Expenses by Account Summary]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="180" y="30" width="200" height="11" forecolor="#827E7E" uuid="daa8fce8-6444-43c9-9410-33ac85b9d10f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[As at]]></text>
+			</staticText>
+			<textField pattern="MM/dd/yyyy">
+				<reportElement x="180" y="41" width="200" height="13" forecolor="#827E7E" backcolor="#FFFFFF" uuid="ce24cb7a-0b98-444d-b0ef-2a82cbfd235b">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="styled">
+					<font size="7" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement mode="Opaque" x="1" y="55" width="117" height="15" forecolor="#FFFFFF" backcolor="#3BB2AC" uuid="10aab825-2738-4fc6-8fa4-7c21231a503f">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box padding="2">
+					<pen lineWidth="0.25" lineColor="#999999"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Account]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="118" y="55" width="140" height="15" forecolor="#FFFFFF" backcolor="#3BB2AC" uuid="15e57528-5265-4d97-90c7-1911a0ffebf1">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box padding="2">
+					<pen lineWidth="0.25" lineColor="#999999"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Account Description]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="258" y="55" width="152" height="15" forecolor="#FFFFFF" backcolor="#3BB2AC" uuid="44180dec-6803-4c20-ac0d-a474ca42f2c5">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box padding="2">
+					<pen lineWidth="0.25" lineColor="#999999"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Category]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="410" y="55" width="140" height="15" forecolor="#FFFFFF" backcolor="#3BB2AC" uuid="c29eb40e-d825-4916-adbc-2e253233bb29">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box padding="2">
+					<pen lineWidth="0.25" lineColor="#999999"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Amount]]></text>
+			</staticText>
+		</band>
+	</title>
+	<detail>
+		<band>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+		</band>
+	</detail>
+	<noData>
+		<band height="25">
+			<staticText>
+				<reportElement x="80" y="5" width="400" height="18" uuid="fc3b98ce-881d-473f-9037-a245ec95fa06"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[No Data to Display]]></text>
+			</staticText>
+		</band>
+	</noData>
+</jasperReport>

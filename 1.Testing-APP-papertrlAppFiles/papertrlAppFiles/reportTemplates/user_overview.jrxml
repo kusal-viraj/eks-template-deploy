@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.8.0.final using JasperReports Library version 6.8.0-2ed8dfabb690ff337a5797129f2cd92902b0c87b  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="user_overview" pageWidth="595" pageHeight="842" whenNoDataType="NoDataSection" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="9f3d1da8-f856-411b-bb8e-fa79985f70c1">
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="approverName" class="java.lang.String">
+		<fieldDescription><![CDATA[approverName]]></fieldDescription>
+	</field>
+	<field name="approvedPOs" class="java.lang.Long">
+		<fieldDescription><![CDATA[approvedPOs]]></fieldDescription>
+	</field>
+	<field name="approvedBills" class="java.lang.Long">
+		<fieldDescription><![CDATA[approvedBills]]></fieldDescription>
+	</field>
+	<field name="approvedExpenses" class="java.lang.Long">
+		<fieldDescription><![CDATA[approvedExpenses]]></fieldDescription>
+	</field>
+	<field name="pendingPOs" class="java.lang.Long">
+		<fieldDescription><![CDATA[pendingPOs]]></fieldDescription>
+	</field>
+	<field name="pendingBills" class="java.lang.Long">
+		<fieldDescription><![CDATA[pendingBills]]></fieldDescription>
+	</field>
+	<field name="pendingExpenses" class="java.lang.Long">
+		<fieldDescription><![CDATA[pendingExpenses]]></fieldDescription>
+	</field>
+	<variable name="PENDING_PO" class="java.lang.Long" resetType="Group" resetGroup="Group1" calculation="Sum">
+		<variableExpression><![CDATA[$F{pendingPOs}]]></variableExpression>
+	</variable>
+	<variable name="APPROVED_PO" class="java.lang.Long" resetType="Group" resetGroup="Group1" calculation="Sum">
+		<variableExpression><![CDATA[$F{approvedPOs}]]></variableExpression>
+	</variable>
+	<variable name="APPROVED_BILLS" class="java.lang.Long" resetType="Group" resetGroup="Group1" calculation="Sum">
+		<variableExpression><![CDATA[$F{approvedBills}]]></variableExpression>
+	</variable>
+	<variable name="PENDING_BILL" class="java.lang.Long" resetType="Group" resetGroup="Group1" calculation="Sum">
+		<variableExpression><![CDATA[$F{pendingBills}]]></variableExpression>
+	</variable>
+	<variable name="PENDING_EXPENSE" class="java.lang.Long" resetType="Group" resetGroup="Group1" calculation="Sum">
+		<variableExpression><![CDATA[$F{pendingExpenses}]]></variableExpression>
+	</variable>
+	<variable name="APPROVED_EXPENSE" class="java.lang.Long" resetType="Group" resetGroup="Group1" calculation="Sum">
+		<variableExpression><![CDATA[$F{approvedExpenses}]]></variableExpression>
+	</variable>
+	<group name="Group1">
+		<groupExpression><![CDATA[$F{approverName}]]></groupExpression>
+		<groupHeader>
+			<band/>
+		</groupHeader>
+		<groupFooter>
+			<band height="20">
+				<textField>
+					<reportElement x="2" y="0" width="110" height="20" backcolor="rgba(255, 255, 255, 0.0)" uuid="cf8083fe-b7cb-4e81-a7fe-d8ae39ebd1f1"/>
+					<box padding="2">
+						<pen lineWidth="0.25" lineColor="#999999"/>
+					</box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{approverName}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="112" y="0" width="80" height="20" backcolor="rgba(255, 255, 255, 0.0)" uuid="e16e2b41-2167-4ef7-8e4c-7cd6e3a5b27a"/>
+					<box padding="2">
+						<pen lineWidth="0.25" lineColor="#999999"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{APPROVED_PO}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="192" y="0" width="70" height="20" backcolor="rgba(255, 255, 255, 0.0)" uuid="0a589c32-e0f5-429c-9807-f243dae23617"/>
+					<box padding="2">
+						<pen lineWidth="0.25" lineColor="#999999"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{APPROVED_BILLS}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="262" y="0" width="70" height="20" backcolor="rgba(255, 255, 255, 0.0)" uuid="07fa710f-f01f-4af1-a28a-89c2841a7542"/>
+					<box padding="2">
+						<pen lineWidth="0.25" lineColor="#999999"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{APPROVED_EXPENSE}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="332" y="0" width="80" height="20" backcolor="rgba(255, 255, 255, 0.0)" uuid="450557e8-be16-4788-8947-59abdf77100d"/>
+					<box padding="2">
+						<pen lineWidth="0.25" lineColor="#999999"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{PENDING_PO}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="412" y="0" width="70" height="20" backcolor="rgba(255, 255, 255, 0.0)" uuid="5cdda95b-ee8f-4d0f-899c-d8da25e9f01c"/>
+					<box padding="2">
+						<pen lineWidth="0.25" lineColor="#999999"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{PENDING_BILL}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="482" y="0" width="70" height="20" uuid="0b062655-0874-4262-814c-2420d42ecdc0"/>
+					<box padding="2">
+						<pen lineWidth="0.25" lineColor="#999999"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{PENDING_EXPENSE}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupFooter>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="86" splitType="Stretch">
+			<staticText>
+				<reportElement x="180" y="5" width="200" height="20" forecolor="#000000" uuid="d100b3f7-34e5-44a6-91f4-6f599c73acd0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="15" isBold="false"/>
+				</textElement>
+				<text><![CDATA[User Overview Report]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="180" y="26" width="200" height="11" forecolor="#827E7E" uuid="ded1a48a-5d95-411b-ab36-0131b82329b4"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[As at]]></text>
+			</staticText>
+			<textField pattern="MM/dd/yyyy">
+				<reportElement x="180" y="37" width="200" height="13" forecolor="#827E7E" backcolor="#FFFFFF" uuid="5120ec06-5cdd-4f21-8876-0464079a948b">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="styled">
+					<font size="7" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement mode="Opaque" x="2" y="56" width="110" height="15" forecolor="#FFFFFF" backcolor="#3BB2AC" uuid="14dac822-3e53-4c82-b142-62aa96c91c2a"/>
+				<box>
+					<pen lineWidth="0.25" lineColor="#999999"/>
+				</box>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="112" y="56" width="220" height="15" forecolor="#FFFFFF" backcolor="#3BB2AC" uuid="38ca7cd5-8f4c-4694-b3f7-ad3e3c3add29">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.25" lineColor="#999999"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Number Approved]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="332" y="56" width="220" height="15" forecolor="#FFFFFF" backcolor="#3BB2AC" uuid="e4d0a54a-0503-45f5-952d-e529a7d99e8e">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.25" lineColor="#999999"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Number Pending]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="2" y="71" width="110" height="15" forecolor="#FFFFFF" backcolor="#3BB2AC" uuid="cb4e141f-6e61-46a3-87f9-3fd57713b8dc">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box padding="2">
+					<pen lineWidth="0.25" lineColor="#999999"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Approvers]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="112" y="71" width="80" height="15" forecolor="#FFFFFF" backcolor="#3BB2AC" uuid="0d461833-f294-453f-b504-2dc533967219">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box padding="2">
+					<pen lineWidth="0.25" lineColor="#999999"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Purchase Orders]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="192" y="71" width="70" height="15" forecolor="#FFFFFF" backcolor="#3BB2AC" uuid="37903d3d-8d87-456b-8749-d86ec7585e8a">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box padding="2">
+					<pen lineWidth="0.25" lineColor="#999999"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Bills]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="262" y="71" width="70" height="15" forecolor="#FFFFFF" backcolor="#3BB2AC" uuid="31ac6a04-f26f-43b8-8c0b-77b5ffb58ee7">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box padding="2">
+					<pen lineWidth="0.25" lineColor="#999999"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Expenses]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="332" y="71" width="80" height="15" forecolor="#FFFFFF" backcolor="#3BB2AC" uuid="0f597fcf-d91c-4acd-97d0-db932994acea">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box padding="2">
+					<pen lineWidth="0.25" lineColor="#999999"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Purchase Orders]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="412" y="71" width="70" height="15" forecolor="#FFFFFF" backcolor="#3BB2AC" uuid="a5da1718-2026-4264-8367-733568e99170">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box padding="2">
+					<pen lineWidth="0.25" lineColor="#999999"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Bills]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="482" y="71" width="70" height="15" forecolor="#FFFFFF" backcolor="#3BB2AC" uuid="0effc9c1-aee2-4a16-a751-00bcf39468f2">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box padding="2">
+					<pen lineWidth="0.25" lineColor="#999999"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Expenses]]></text>
+			</staticText>
+		</band>
+	</title>
+	<noData>
+		<band height="28">
+			<staticText>
+				<reportElement x="80" y="6" width="400" height="18" uuid="d8370124-e147-434a-bf16-e95c742dc77d"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[No Data to Display]]></text>
+			</staticText>
+		</band>
+	</noData>
+</jasperReport>

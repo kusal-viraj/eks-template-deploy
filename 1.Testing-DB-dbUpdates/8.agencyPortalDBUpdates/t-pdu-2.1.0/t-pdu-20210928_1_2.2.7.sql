@@ -1,0 +1,3 @@
+-----------Hashila-----2.2.7-----------------
+
+UPDATE `umm_menu` SET `name` = 'Offline Payments', `display_text` = 'Offline Payments', `menu_style` = 'fa fa-list-alt', `url` = '/home/payments', `tab` = '3', `type` = 'S', `super_type` = 1029, `super_type_2` = NULL, `department` = 'Admin', `menu_order` = 4, `display_icon` = 'fa fa-list-alt', `short_name` = 'Offline Payments', `detail_text` = 'Offline Payments', `status` = 'A', `portal_menu` = 0, `individual_tenant_menu` = 1, `vendor_community_menu` = 0, `version` = 'V2', `auth_code` = 'PAYMENT_OFFLINE_PAYMENT', `slim_menu` = 0, `hierachy` = '1005,1029', `created_by` = 'System', `created_on` = '2021-09-28 15:26:35', `update_by` = NULL, `update_on` = NULL, `delete_by` = NULL, `delete_on` = NULL WHERE `id` = 1020;

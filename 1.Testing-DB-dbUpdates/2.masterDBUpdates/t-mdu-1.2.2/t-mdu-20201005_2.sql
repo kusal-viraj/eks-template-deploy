@@ -1,0 +1,12 @@
+DELETE FROM `tp_integration_service_name` WHERE (`id`='10');
+DELETE FROM `tp_integration_service_name` WHERE (`id`='11');
+DELETE FROM `tp_integration_service_name` WHERE (`id`='12');
+DELETE FROM `tp_integration_service_name` WHERE (`id`='16');
+DELETE FROM `tp_integration_service_name` WHERE (`id`='17');
+DELETE FROM `tp_integration_service_name` WHERE (`id`='18');
+UPDATE `tp_integration_service_name` SET `name`='Pull Vendors' WHERE (`id`='3');
+UPDATE `tp_integration_service_name` SET `name`='Pull Payments' WHERE (`id`='6');
+UPDATE `tp_integration_service_name` SET `name`='Pull Payments' WHERE (`id`='6');
+UPDATE `tp_integration_service_name` SET `name`='Pull Invoices' WHERE (`id`='9');
+UPDATE `tp_integration_service_name` SET `name`='Pull Accounts' WHERE (`id`='15');
+UPDATE `tp_integration_service_name` SET `name`='Pull Items' WHERE (`id`='21');

@@ -1,0 +1,1 @@
+ALTER TABLE `vp_po_account_detail` CHANGE COLUMN `account_number` `account_number` VARCHAR(100) NULL DEFAULT NULL COLLATE 'latin1_swedish_ci' AFTER `amount`;

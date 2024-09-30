@@ -1,0 +1,7 @@
+---Thiwanka---2.9.115----
+
+
+INSERT INTO `umm_privilages` (`id`, `url`, `text`, `auth_code`, `created_by`, `created_on`, `update_by`, `update_on`, `delete_by`, `delete_on`) VALUES (157, 'Apply Negative Bills', 'Apply Negative Bills', 'APPLY_NEGATIVE_BILL', 'System', '2024-03-14 12:57:00', NULL, NULL, NULL, NULL);
+INSERT INTO `umm_menu_privilage` (`menu_id`, `privilage_id`, `auth_code`, `created_by`, `created_on`, `update_by`, `update_on`, `delete_by`, `delete_on`) VALUES (1019, 157, 'APPLY_NEGATIVE_BILL', 'System', '2024-03-14 12:57:00', NULL, NULL, NULL, NULL);
+INSERT INTO `umm_privilages` (`id`, `url`, `text`, `auth_code`, `created_by`, `created_on`, `update_by`, `update_on`, `delete_by`, `delete_on`) VALUES (158, 'Remove Negative Bills', 'Remove Negative Bills', 'REMOVE_NEGATIVE_BILL', 'System', '2024-03-14 12:57:00', NULL, NULL, NULL, NULL);
+INSERT INTO `umm_menu_privilage` (`menu_id`, `privilage_id`, `auth_code`, `created_by`, `created_on`, `update_by`, `update_on`, `delete_by`, `delete_on`) VALUES (1019, 158, 'REMOVE_NEGATIVE_BILL', 'System', '2024-03-14 12:57:00', NULL, NULL, NULL, NULL);

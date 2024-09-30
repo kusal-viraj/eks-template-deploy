@@ -1,0 +1,1 @@
+UPDATE  `payment_provider_for_customer` set company_id = '747747474747' where payment_provider = 2;

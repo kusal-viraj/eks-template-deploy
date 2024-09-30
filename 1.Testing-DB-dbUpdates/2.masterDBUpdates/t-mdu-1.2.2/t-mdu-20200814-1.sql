@@ -1,0 +1,26 @@
+INSERT INTO `papertrl_master_tenant` (`package_id`, `tenant_id`, `owner_name`,
+`first_name`, `last_name`, `business_address`, `owner_email`, `db_server_id`, `sftp_server_id`,
+`db_cache_prep_stmts`, `db_prep_stmt_cache_size`, `db_prep_stmt_cache_sql_limit`,
+`db_connection_time_out`, `db_driver_class_name`, `db_idle_time_out`, `db_init_fail_timeout`,
+`db_leak_detection_threadshold`, `db_pool_size`, `db_max_life`, `db_min_idle`,
+`db_default_auto_commit`, `db_validation_query`, `user_auth_type`, `db_host`, `db_port`,
+`db_name`, `db_url`, `db_username`, `db_password`, `sftp_host`, `sftp_port`, `sftp_user`,
+`sftp_password`, `ad_context_factory`, `ad_provider_url`, `ad_security_auth`, `ad_ou_dc_param`,
+`ad_sample_sync_user`, `ad_sample_sync_user_password`, `auto_sync_enable`, `status`,
+`last_updated_on`, `last_updated_by`, `date_created`, `created_user`, `deleted_on`,
+`deleted_by`) VALUES (3, 'vendor_community', 'PaperTrl', 'PaperTrl', 'PaperTrl', 'Baltimore,
+MD', 'dimuthu.r@papertrl.com', 1, 1, 'true', 250, 2048, 1000, 'com.mysql.jdbc.Driver', 60000,
+15000, 62000, 50, 60000, 2, 0, 'SELECT 1', 'DB', 'papertrl-db-lb', 3000,
+'papertrl_vendor_community', 'jdbc:mysql://papertrl-db-lb:3000/papertrl_vendor_community',
+'papertrl', 'ptmariadbcom', 'papertrl-sftp-lb', 22, 'papertrl', 'ptsftpcom', NULL, NULL, NULL,
+NULL, NULL, NULL, 'I', 'A', '2020-07-29 19:18:27', 'admin', '2020-08-14 16:53:50', 'support',
+NULL, NULL);
+
+INSERT INTO `papertrl_mst_db`.`oauth_client_details` (`client_id`, `resource_ids`,
+`client_secret`, `scope`, `authorized_grant_types`, `web_server_redirect_uri`, `authorities`,
+`access_token_validity`, `refresh_token_validity`, `additional_information`, `autoapprove`,
+`encrypted_password`) VALUES ('vendor_community_IN_APP_CLIENT', NULL,
+'{bcrypt}$2a$10$6r3ik.uxJUDLAojGYX5Muep8GlZBaa/J6SJ8TsNh6uujE5188gZ9K', 'read,write,openid',
+'authorization_code,refresh_token,password', '', 'ROLE_CLIENT', '7200', '3110400', NULL,
+'true', '');
+

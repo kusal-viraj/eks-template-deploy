@@ -1,0 +1,2 @@
+UPDATE common_grid_column_template SET header = 'Valid Thru', placeholder = 'Valid Thru' WHERE grid_id = 66 AND field = 'vcard.effectiveUntil';
+UPDATE common_grid_column_user_wice SET header = 'Valid Thru', placeholder = 'Valid Thru' WHERE grid_id = 66 AND field = 'vcard.effectiveUntil';

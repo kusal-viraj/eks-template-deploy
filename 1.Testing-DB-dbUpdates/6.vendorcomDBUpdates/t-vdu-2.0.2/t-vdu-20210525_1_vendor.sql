@@ -1,0 +1,2 @@
+INSERT INTO `vendor_role_previlege`( `role_id`, `privilege_id`, `sub_account_id`, `created_by`, `created_on`, `update_by`, `update_on`, `delete_by`, `delete_on`) VALUES ( 1, 176, NULL, 'bemaje4477@geekale.com', '2021-05-25 13:41:30', NULL, NULL, NULL, NULL);
+INSERT INTO `vendor_role_previlege`( `role_id`, `privilege_id`, `sub_account_id`, `created_by`, `created_on`, `update_by`, `update_on`, `delete_by`, `delete_on`) VALUES ( 1, 177, NULL, 'bemaje4477@geekale.com', '2021-05-25 13:41:30', NULL, NULL, NULL, NULL);

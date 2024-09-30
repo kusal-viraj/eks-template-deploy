@@ -1,0 +1,1 @@
+update `tenant_wise_transaction` set status = 'A' where tp_txn_id = 'ACH20230314-176249701';

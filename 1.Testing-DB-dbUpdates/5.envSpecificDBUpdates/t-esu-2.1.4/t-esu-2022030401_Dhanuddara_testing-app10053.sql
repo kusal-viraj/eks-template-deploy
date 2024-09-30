@@ -1,0 +1,2 @@
+INSERT INTO `common_integration_service_status`( `system_id`, `tp_company_id`, `service_id`, `syncable`, `created_by`, `created_on`, `update_by`, `update_on`, `delete_by`, `delete_on`) VALUES ( 7, 'papertrl_v2', 7, 1, 'support', '2022-02-17 06:08:28', NULL, NULL, NULL, NULL);
+INSERT INTO `common_integration_service_status`( `system_id`, `tp_company_id`, `service_id`, `syncable`, `created_by`, `created_on`, `update_by`, `update_on`, `delete_by`, `delete_on`) VALUES ( 7, 'papertrl_v2', 8, 1, 'support', '2022-02-17 06:08:28', NULL, NULL, NULL, NULL);

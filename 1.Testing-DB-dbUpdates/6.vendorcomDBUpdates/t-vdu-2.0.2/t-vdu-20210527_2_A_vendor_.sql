@@ -1,0 +1,14 @@
+INSERT INTO `vendor_grid_column_template`(`grid_id`, `field`, `header`, `column_show`, `is_sortable`, `is_re_orderable`, `is_re_sizable`, `can_hide`, `align`, `search_type`, `placeholder`, `column_order`, `drop_down_id`, `drop_down_url`) VALUES ( 5, 'inv.approvalGroupName', 'Approval Group', 1, 1, 1, 1, 1, 'left', 'input', 'Approval Group', 16, NULL, '');
+
+UPDATE `vendor_grid_column_template` SET `grid_id` = 5, `field` = 'inv.approvedDate', `header` = 'Approve Date', `column_show` = 1, `is_sortable` = 1, `is_re_orderable` = 1, `is_re_sizable` = 1, `can_hide` = 1, `align` = 'center', `search_type` = 'date', `placeholder` = 'Approve Date', `column_order` = 17, `drop_down_id` = NULL, `drop_down_url` = '' WHERE `id` = 224;
+UPDATE `vendor_grid_column_template` SET `grid_id` = 5, `field` = 'inv.status', `header` = 'Approval Status', `column_show` = 1, `is_sortable` = 1, `is_re_orderable` = 1, `is_re_sizable` = 1, `can_hide` = 1, `align` = 'center', `search_type` = 'dropdown', `placeholder` = 'Approval Status', `column_order` = 18, `drop_down_id` = 5, `drop_down_url` = '' WHERE `id` = 226;
+UPDATE `vendor_grid_column_template` SET `grid_id` = 5, `field` = 'inv.paymentStatus', `header` = 'Payment Status', `column_show` = 1, `is_sortable` = 1, `is_re_orderable` = 1, `is_re_sizable` = 1, `can_hide` = 1, `align` = 'center', `search_type` = 'dropdown', `placeholder` = 'Payment Status', `column_order` = 19, `drop_down_id` = 6, `drop_down_url` = '' WHERE `id` = 227;
+UPDATE `vendor_grid_column_template` SET `grid_id` = 5, `field` = 'inv.applicableDiscountAmount', `header` = 'Applicable Discount', `column_show` = 1, `is_sortable` = 1, `is_re_orderable` = 1, `is_re_sizable` = 1, `can_hide` = 1, `align` = 'right', `search_type` = 'numeric', `placeholder` = 'Applicable Discount', `column_order` = 20, `drop_down_id` = NULL, `drop_down_url` = '' WHERE `id` = 228;
+UPDATE `vendor_grid_column_template` SET `grid_id` = 5, `field` = 'inv.discountApplicableDate', `header` = 'Discount Applicable Date', `column_show` = 1, `is_sortable` = 1, `is_re_orderable` = 1, `is_re_sizable` = 1, `can_hide` = 1, `align` = 'center', `search_type` = 'date', `placeholder` = 'Discount Applicable Date', `column_order` = 21, `drop_down_id` = NULL, `drop_down_url` = '' WHERE `id` = 229;
+UPDATE `vendor_grid_column_template` SET `grid_id` = 5, `field` = 'inv.exportStatus', `header` = 'Export Status', `column_show` = 1, `is_sortable` = 1, `is_re_orderable` = 1, `is_re_sizable` = 1, `can_hide` = 1, `align` = 'center', `search_type` = 'dropdown', `placeholder` = 'Export Status', `column_order` = 22, `drop_down_id` = 7, `drop_down_url` = '' WHERE `id` = 230;
+UPDATE `vendor_grid_state_template` SET `grid_id` = 5, `start_from` = 0, `total_rows` = 15, `column_widths` = '126,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200' WHERE `id` = 5;
+
+
+
+DELETE FROM `vendor_grid_column_user_wice`;
+DELETE FROM `vendor_grid_state_user_wice`;

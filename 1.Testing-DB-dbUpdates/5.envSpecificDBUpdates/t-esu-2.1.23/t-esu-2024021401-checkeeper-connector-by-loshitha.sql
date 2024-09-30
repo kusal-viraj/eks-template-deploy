@@ -1,0 +1,1 @@
+INSERT INTO payment_provider_for_customer (status, tenant, tenant_id, created_by, created_on, update_by, update_on) VALUES ('A','10128', 'testing-app10128', 'support', '2024-02-13 10:50:56', 'Dhanuddara', '2024-02-13 10:51:06');

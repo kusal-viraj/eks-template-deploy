@@ -1,0 +1,11 @@
+ALTER TABLE `vp_payment_request_mst`
+	CHANGE COLUMN `is_attended` `unattended` TINYINT(1) NULL DEFAULT NULL AFTER `txn_id`;
+
+ALTER TABLE `vp_payment_request_import_issue`
+	ADD COLUMN `reference_no` VARCHAR(70) NULL DEFAULT NULL AFTER `import_mst_id`;
+
+ALTER TABLE `vp_payment_request_import_mst`
+	ADD COLUMN `upload_status` CHAR(1) NULL DEFAULT NULL AFTER `attachment_url`;
+
+UPDATE common_notification_email_template SET subject='Payment Request Summery Report' WHERE  id=57;
+

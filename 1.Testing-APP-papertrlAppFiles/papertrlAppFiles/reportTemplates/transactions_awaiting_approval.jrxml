@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.8.0.final using JasperReports Library version 6.8.0-2ed8dfabb690ff337a5797129f2cd92902b0c87b  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="transactions_awaiting_approval" pageWidth="625" pageHeight="842" whenNoDataType="NoDataSection" columnWidth="585" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="a80abbc5-ced0-4712-8e57-7bd69c6508de">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Account Wise Expense Summary.xml"/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<parameter name="BILLS_AWAITING_APPROVAL" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+	<parameter name="PO_AWAITING_APPROVAL" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+	<parameter name="EXPENSE_AWAITING_APPROVAL" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="70" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<staticText>
+				<reportElement x="152" y="10" width="256" height="20" forecolor="#000000" uuid="75aaedbb-4f7c-46c2-b534-a5e456e3aac6"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="15" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Transactions Awaiting Approval]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="180" y="30" width="200" height="11" forecolor="#827E7E" uuid="daa8fce8-6444-43c9-9410-33ac85b9d10f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[As at]]></text>
+			</staticText>
+			<textField pattern="MM/dd/yyyy">
+				<reportElement x="180" y="41" width="200" height="13" forecolor="#827E7E" backcolor="#FFFFFF" uuid="ce24cb7a-0b98-444d-b0ef-2a82cbfd235b">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="styled">
+					<font size="7" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<detail>
+		<band height="26">
+			<subreport>
+				<reportElement x="3" y="0" width="597" height="18" isRemoveLineWhenBlank="true" uuid="f040fa9d-554e-4bc4-8b21-e5c455e465b6">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<dataSourceExpression><![CDATA[$P{BILLS_AWAITING_APPROVAL}]]></dataSourceExpression>
+				<subreportExpression><![CDATA["transactions_awaiting_approval_bills_sub.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+		<band height="26">
+			<subreport>
+				<reportElement x="3" y="0" width="597" height="18" isRemoveLineWhenBlank="true" uuid="78fc26ba-d064-48e3-8180-2b02df03b5a8">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<dataSourceExpression><![CDATA[$P{PO_AWAITING_APPROVAL}]]></dataSourceExpression>
+				<subreportExpression><![CDATA["transactions_awaiting_approval_po_sub.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+		<band height="26">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<subreport>
+				<reportElement x="3" y="0" width="597" height="18" isRemoveLineWhenBlank="true" uuid="1de6f04c-a029-4517-9e52-8cdb28f47226">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<dataSourceExpression><![CDATA[$P{EXPENSE_AWAITING_APPROVAL}]]></dataSourceExpression>
+				<subreportExpression><![CDATA["transactions_awaiting_approval_expense_sub.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+	</detail>
+	<noData>
+		<band height="25">
+			<staticText>
+				<reportElement x="80" y="5" width="400" height="18" uuid="fc3b98ce-881d-473f-9037-a245ec95fa06"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[No Data to Display]]></text>
+			</staticText>
+		</band>
+	</noData>
+</jasperReport>

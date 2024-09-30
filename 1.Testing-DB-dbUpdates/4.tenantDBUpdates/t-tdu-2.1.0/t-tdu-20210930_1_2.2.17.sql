@@ -1,0 +1,2 @@
+UPDATE `common_recurring_occurrence_frequent` SET `occurrence_frequent`='No. of occurrences' WHERE  `id`=2;
+UPDATE `common_notification_subscription_event` SET `event`='A payment is submitted for your approval group' WHERE  `id`=11;

@@ -1,0 +1,1 @@
+UPDATE common_grid_column_template SET search_type = 'numeric' WHERE grid_id = 47 AND field = 'exp.amount'

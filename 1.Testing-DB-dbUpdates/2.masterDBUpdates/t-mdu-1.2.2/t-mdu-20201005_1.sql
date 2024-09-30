@@ -1,0 +1,1 @@
+UPDATE `tp_integration_service_property` SET `name`='Auto Pull' WHERE (`id`='3');

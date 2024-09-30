@@ -1,0 +1,1 @@
+UPDATE `umm_menu` SET `url` = '/home/bills' WHERE `id` = 1005;

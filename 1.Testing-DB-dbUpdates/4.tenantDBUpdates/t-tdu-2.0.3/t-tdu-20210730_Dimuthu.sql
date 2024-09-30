@@ -1,0 +1,1 @@
+UPDATE `common_automation_field` SET `short_code`='createdBy' WHERE (`id`='76');

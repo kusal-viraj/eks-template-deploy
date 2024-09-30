@@ -1,0 +1,3 @@
+--------Chandima----------
+
+INSERT INTO common_grid_column_template (grid_id, field, sortable_field, header, column_show, is_sortable, is_re_orderable, is_re_sizable, can_hide, filter_show, is_frozen, align, search_type, placeholder, column_order, column_width) VALUES ('46', 'dept.contactPerson', 'dept.contactPerson', 'Contact Person', '1', '1', '1', '1', '1', '1', '0', 'left', 'input', 'Contact Person', '6', '150');

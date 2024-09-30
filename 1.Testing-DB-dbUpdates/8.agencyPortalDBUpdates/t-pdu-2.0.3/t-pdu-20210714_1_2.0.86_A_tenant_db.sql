@@ -1,0 +1,1 @@
+UPDATE `umm_menu` SET `status`='A', `individual_tenant_menu`='1' WHERE  `id`=1025;

@@ -1,0 +1,3 @@
+INSERT INTO common_additional_document_relation (section_id, module_id, field_id, created_by, created_by_name, created_on, status)
+SELECT field.section_id, field.module_id, field.id, field.created_by, user.`name`, field.created_on,field.`status` FROM common_additional_field field 
+LEFT JOIN umm_user_mst user on user.user_name = field.created_by where field.section_id is not null and field.module_id is not null;

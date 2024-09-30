@@ -1,0 +1,2 @@
+INSERT INTO `papertrl_error_message`( `field_name`, `usb_error_message`, `papertrl_message`, `type`) VALUES ( 'cardInfo.firstName', 'Invalid special character', 'The first name contains an invalid special character.', 1);
+INSERT INTO `papertrl_error_message`( `field_name`, `usb_error_message`, `papertrl_message`, `type`) VALUES ( 'cardInfo.lastName', 'Invalid special character', 'The last name contains an invalid special character.', 1);

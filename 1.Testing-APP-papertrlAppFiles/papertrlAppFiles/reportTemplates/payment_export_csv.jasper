@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.8.0.final using JasperReports Library version 6.8.0-2ed8dfabb690ff337a5797129f2cd92902b0c87b  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="payment_export_csv" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="1e8db5f5-fac9-41f6-97fb-c6edbaa2aef4">
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="vendor" class="java.lang.String">
+		<fieldDescription><![CDATA[vendor]]></fieldDescription>
+	</field>
+	<field name="paymentType" class="java.lang.String">
+		<fieldDescription><![CDATA[paymentType]]></fieldDescription>
+	</field>
+	<field name="paymentRef" class="java.lang.String">
+		<fieldDescription><![CDATA[paymentRef]]></fieldDescription>
+	</field>
+	<field name="documentDate" class="java.lang.String">
+		<fieldDescription><![CDATA[documentDate]]></fieldDescription>
+	</field>
+	<field name="paymentDate" class="java.lang.String">
+		<fieldDescription><![CDATA[paymentDate]]></fieldDescription>
+	</field>
+	<field name="balanceAmount" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[balanceAmount]]></fieldDescription>
+	</field>
+	<field name="discount" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[discount]]></fieldDescription>
+	</field>
+	<field name="status" class="java.lang.String">
+		<fieldDescription><![CDATA[status]]></fieldDescription>
+	</field>
+	<field name="amount" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[amount]]></fieldDescription>
+	</field>
+	<field name="documentNo" class="java.lang.String">
+		<fieldDescription><![CDATA[documentNo]]></fieldDescription>
+	</field>
+	<field name="isOnline" class="java.lang.Boolean">
+		<fieldDescription><![CDATA[isOnline]]></fieldDescription>
+	</field>
+	<title>
+		<band height="35" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="60" height="30" uuid="377119d0-6d13-43c8-9e1a-4bb1000a7a2d"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Vendor]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="60" y="0" width="100" height="30" uuid="6e59eb16-d75c-4bca-a18c-a8ebea9e4078"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Document Number]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="160" y="0" width="80" height="30" uuid="f60553a4-28b2-432c-b219-f76bbef46aa0"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Payment Type]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="240" y="0" width="80" height="30" uuid="ff75fe5c-5e76-43e5-b5cb-0f44da83da97"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Payment Ref]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="320" y="0" width="80" height="30" uuid="25e48d52-6495-49e9-92ee-8562742fbade"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Document Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="400" y="0" width="69" height="30" uuid="db9945c5-b59d-4e61-889d-ed1cbbec9dbf"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Amount]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="469" y="0" width="100" height="30" uuid="9d1d2d5b-d39a-429d-b5c6-e0480b5a5028"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Balance Amount]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="569" y="0" width="66" height="30" uuid="3f5c408a-765b-49d1-bd70-5562b58edbe5"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Discount]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="635" y="0" width="75" height="30" uuid="043d2c12-e3b6-4f38-9fbc-299e21b5444b"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Status]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="710" y="0" width="75" height="30" uuid="bc25639d-fcc0-455f-92a1-82b185886ae7"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Online/Offline]]></text>
+			</staticText>
+		</band>
+	</title>
+	<detail>
+		<band height="41" splitType="Stretch">
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToTallestObject" x="0" y="-1" width="60" height="30" uuid="9400851c-f4c3-4ec0-9f49-2ab86702e5b2"/>
+				<textFieldExpression><![CDATA[$F{vendor}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToTallestObject" x="60" y="-1" width="100" height="30" uuid="42fd14d6-9ed5-47eb-a0c1-485198b9235a"/>
+				<textFieldExpression><![CDATA[$F{documentNo}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToTallestObject" x="160" y="-1" width="80" height="30" uuid="fb566753-2208-4ab0-9e15-dea2cda7e708"/>
+				<textFieldExpression><![CDATA[$F{paymentType}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToTallestObject" x="240" y="-1" width="80" height="30" uuid="8242bedb-ec55-4679-8846-32793e961296"/>
+				<textFieldExpression><![CDATA[$F{paymentRef}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToTallestObject" x="320" y="-1" width="80" height="30" uuid="fd3365e0-6579-4c55-b791-123f129a6a9c"/>
+				<textFieldExpression><![CDATA[$F{documentDate}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToTallestObject" x="400" y="-1" width="69" height="30" uuid="ce8f41fa-c29b-4629-953c-79f5263f4f9a"/>
+				<textFieldExpression><![CDATA[$F{amount}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToTallestObject" x="469" y="-1" width="100" height="30" uuid="0a020679-bdd7-4179-90f1-9ea9ca88c784"/>
+				<textFieldExpression><![CDATA[$F{balanceAmount}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToTallestObject" x="569" y="-1" width="66" height="30" uuid="13e386bc-06ec-4038-af8f-ca7af1f1b254"/>
+				<textFieldExpression><![CDATA[$F{discount}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement stretchType="RelativeToTallestObject" x="635" y="-1" width="75" height="30" uuid="0cde8f51-9a5f-49b5-b991-028d9c2d2a7e"/>
+				<textElement textAlignment="Center" verticalAlignment="Top"/>
+				<textFieldExpression><![CDATA[$F{status}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="710" y="-1" width="74" height="30" uuid="c7ec4a9e-568f-4d7e-8483-e54384058584"/>
+				<textFieldExpression><![CDATA[$F{isOnline}==true?"Online":"Offline"]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

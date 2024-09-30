@@ -1,0 +1,2 @@
+ALTER TABLE `vp_expense_mst` ADD COLUMN `export_status` char(1) NULL DEFAULT 'N' AFTER `business_purpose`;
+INSERT INTO `umm_menu_privilage` (`id`, `menu_id`, `prililage_id`, `data_created`, `user_inserted`) VALUES ('189', '37', '47', '2020-06-11 16:49:22', 'System');

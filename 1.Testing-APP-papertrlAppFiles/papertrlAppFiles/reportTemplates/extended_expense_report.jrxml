@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.8.0.final using JasperReports Library version 6.8.0-2ed8dfabb690ff337a5797129f2cd92902b0c87b  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="extended_expense_report" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="941b31da-0d89-4abf-8fe6-89e2fcd99a12">
+	<parameter name="TENANT_NAME" class="java.lang.String">
+		<parameterDescription><![CDATA[TENANT_NAME]]></parameterDescription>
+	</parameter>
+	<parameter name="EXPENSE_ID" class="java.lang.Long">
+		<parameterDescription><![CDATA[EXPENSE_ID]]></parameterDescription>
+	</parameter>
+	<parameter name="GENERATE_DATE" class="java.util.Date">
+		<parameterDescription><![CDATA[GENERATE_DATE]]></parameterDescription>
+	</parameter>
+	<parameter name="APPROVAL_DETAILS" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+	<parameter name="AUDIT_TRAIL_DETAILS" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource">
+		<parameterDescription><![CDATA[AUDIT_TRAIL_DETAILS]]></parameterDescription>
+	</parameter>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="reportName" class="java.lang.String">
+		<fieldDescription><![CDATA[reportName]]></fieldDescription>
+	</field>
+	<field name="businessPurpose" class="java.lang.String">
+		<fieldDescription><![CDATA[businessPurpose]]></fieldDescription>
+	</field>
+	<field name="createdOn" class="java.util.Date">
+		<fieldDescription><![CDATA[createdOn]]></fieldDescription>
+	</field>
+	<field name="creatorName" class="java.lang.String">
+		<fieldDescription><![CDATA[creatorName]]></fieldDescription>
+	</field>
+	<field name="totalAmount" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[totalAmount]]></fieldDescription>
+	</field>
+	<field name="status" class="java.lang.Character">
+		<fieldDescription><![CDATA[status]]></fieldDescription>
+	</field>
+	<field name="approvedDate" class="java.util.Date">
+		<fieldDescription><![CDATA[approvedDate]]></fieldDescription>
+	</field>
+	<field name="approvedBy" class="java.lang.String">
+		<fieldDescription><![CDATA[approvedBy]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="89" splitType="Stretch">
+			<image>
+				<reportElement x="6" y="8" width="130" height="40" uuid="fcdff253-6782-409c-8307-f063c8c2c09c"/>
+				<imageExpression><![CDATA["logo.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="348" y="0" width="207" height="20" uuid="c79ce17e-fc02-481a-bb0f-ea727e8c6a67">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PaperTrl Record Identification]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="290" y="20" width="76" height="20" uuid="41ad01fa-adb0-46d9-a63b-8e6151bbbd0d"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="SansSerif" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Account ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="308" y="40" width="58" height="20" uuid="c150af26-dde6-4d94-866f-397743b57b0d"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="SansSerif" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Expense ID ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="268" y="60" width="98" height="20" uuid="b172123d-9138-4de9-98c1-f5a2e14de456">
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="SansSerif" isBold="true"/>
+					<paragraph rightIndent="3"/>
+				</textElement>
+				<text><![CDATA[Expense Generated]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="376" y="40" width="179" height="20" uuid="c4abbb3d-3270-4ea3-a48e-970a1206d26f">
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<paragraph leftIndent="1"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{EXPENSE_ID}]]></textFieldExpression>
+			</textField>
+			<textField pattern="MMM d, yyyy h:mm:ss a" isBlankWhenNull="true">
+				<reportElement x="376" y="60" width="179" height="20" uuid="c366a8b6-9541-4d48-83f6-5af2d0dc2ee7">
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<paragraph leftIndent="1"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{GENERATE_DATE}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="376" y="20" width="179" height="20" uuid="f83cdca5-28f5-4e62-bac8-4f4d1c194fac">
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<paragraph leftIndent="1"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{TENANT_NAME}+".papertrl.com"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="366" y="20" width="10" height="20" uuid="970ecc97-dcee-42b5-ac39-aa47de48bd11"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="366" y="40" width="10" height="20" uuid="e8365e1d-3bd6-4ddc-8bca-9d2a48935e43"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="366" y="60" width="10" height="20" uuid="3c7d23a8-29ae-483c-aedb-a097216ba068"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[:]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="20" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="0" width="555" height="20" backcolor="#BDBDBD" uuid="bc40729b-7a17-4b34-ac69-ff7a55f485cf">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Expense Submission Details]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="114" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="2" width="90" height="20" uuid="fa943f36-bce9-4885-9beb-2c85f53d3410">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Expense Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="22" width="90" height="20" uuid="d432f959-3156-4ffc-bdf3-88a0108e49d1">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Submitted by]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="42" width="90" height="20" uuid="ceaadbfb-8ffb-4e0a-8864-ea8d4178e6f6">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Expense Amount]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="304" y="2" width="86" height="20" uuid="4bc3f082-a24f-4662-a526-75ca522a2c4d">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Approval Status]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="304" y="22" width="86" height="20" uuid="5c556269-74db-4316-8f99-742381f704f9">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Approved Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="304" y="42" width="86" height="20" uuid="f97513ff-b2c7-4b62-ac50-8de9cdc50896">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Approver]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="70" width="90" height="20" uuid="094ec422-3377-4431-a81f-91936d89636a">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Report Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="90" width="90" height="20" uuid="265af2c7-6ecc-44bb-9620-405b1475daca">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Business Purpose]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="106" y="70" width="191" height="20" uuid="6981dd7b-9f26-48b5-8e41-c6dc78c09b01">
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<paragraph leftIndent="1"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{reportName}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="106" y="90" width="191" height="20" uuid="654785c2-88a0-44d9-88a3-42c8f6384440">
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<paragraph leftIndent="1"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{businessPurpose}]]></textFieldExpression>
+			</textField>
+			<textField pattern="MMM d, yyyy h:mm:ss a" isBlankWhenNull="true">
+				<reportElement x="106" y="2" width="191" height="20" uuid="ea862745-83c0-45c5-ade8-37fbe8a9b864">
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<paragraph leftIndent="1"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{createdOn}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="106" y="22" width="191" height="20" uuid="4d9fd62e-554a-42a9-be04-a5b9dae3ff49">
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<paragraph leftIndent="1"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{creatorName}]]></textFieldExpression>
+			</textField>
+			<textField pattern="¤#,##0.00" isBlankWhenNull="true">
+				<reportElement x="106" y="42" width="191" height="20" uuid="6a29f7f0-f18c-4649-b7bb-b74c68a1a15d">
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<paragraph leftIndent="1"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{totalAmount}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="410" y="2" width="145" height="20" uuid="d0ea4051-cafe-49b1-adb7-29a0fdb94e11">
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<paragraph leftIndent="1"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{status}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="410" y="22" width="145" height="20" uuid="c1b9e9de-6025-4bf8-868e-2ebde9a8267a">
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<paragraph leftIndent="1"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{approvedDate}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="410" y="42" width="145" height="20" uuid="f8d780cf-5ad3-43c2-92f7-72dbffc0f851">
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<paragraph leftIndent="1"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{approvedBy}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="90" y="2" width="10" height="20" uuid="a0fc5528-70fd-4cd3-a4ce-15d9f8c06cf8"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="90" y="22" width="10" height="20" uuid="18cd0ff5-d9f1-4867-880d-dcdf0dc27772"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="90" y="42" width="10" height="20" uuid="6d7c1444-c08c-4662-8df1-9b3ef804baeb"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="90" y="70" width="10" height="20" uuid="fd29a214-faa3-4a92-84a0-25bdb00ad318"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="90" y="90" width="10" height="20" uuid="6ed52ae3-839d-4244-9da6-83873f11c249"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="390" y="2" width="10" height="20" uuid="3729af05-04a1-401b-8b15-d5208e18c305"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="390" y="22" width="10" height="20" uuid="c94d5740-14db-4623-9aee-9cec062fd6f6"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="390" y="42" width="10" height="20" uuid="2458bae3-01e6-45d8-9ce8-718a164d6b66"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[:]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="97" splitType="Stretch">
+			<subreport>
+				<reportElement x="0" y="3" width="555" height="57" uuid="5b92744b-73c5-4999-b8a5-c554c3dcf7a2"/>
+				<dataSourceExpression><![CDATA[$P{APPROVAL_DETAILS}]]></dataSourceExpression>
+				<subreportExpression><![CDATA["extended_expense_account_list_sub_report.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+		<band height="74">
+			<subreport>
+				<reportElement x="0" y="1" width="555" height="57" uuid="cafe060e-7c9e-495c-9c54-8d2c571b8038">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<dataSourceExpression><![CDATA[$P{AUDIT_TRAIL_DETAILS}]]></dataSourceExpression>
+				<subreportExpression><![CDATA["extended_expense_audittrail_sub_report.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="57" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

@@ -1,0 +1,1 @@
+UPDATE papertrl_master_tenant SET sftp_server_id='1', sftp_host='papertrl-sftp-lb', sftp_password='ulh49NTTnh', sftp_privet_key_path='' WHERE  id=10001;

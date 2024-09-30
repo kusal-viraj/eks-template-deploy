@@ -1,0 +1,6 @@
+
+INSERT INTO `umm_menu_privilage` (`id`, `menu_id`, `privilage_id`, `auth_code`, `created_by`, `created_on`, `update_by`, `update_on`, `delete_by`, `delete_on`) VALUES (382, 1019, 16, 'BILL_CHANGE_ASSIGNEE', 'System', '2021-06-15 13:48:00', NULL, NULL, NULL, NULL);
+INSERT INTO `umm_menu_privilage` (`id`, `menu_id`, `privilage_id`, `auth_code`, `created_by`, `created_on`, `update_by`, `update_on`, `delete_by`, `delete_on`) VALUES (383, 1007, 3, 'EXPENSES_DETAIL_VIEW', 'System', '2021-06-15 13:48:00', NULL, NULL, NULL, NULL);
+
+INSERT INTO `umm_role_previlege` (`role_id`, `privilege_id`, `sub_account_id`, `created_by`, `created_on`, `update_by`, `update_on`, `delete_by`, `delete_on`) VALUES (1, 382, NULL, 'admin', '2021-06-15 13:52:00', NULL, NULL, NULL, NULL);
+INSERT INTO `umm_role_previlege` (`role_id`, `privilege_id`, `sub_account_id`, `created_by`, `created_on`, `update_by`, `update_on`, `delete_by`, `delete_on`) VALUES (1, 383, NULL, 'admin', '2021-06-15 13:52:00', NULL, NULL, NULL, NULL);

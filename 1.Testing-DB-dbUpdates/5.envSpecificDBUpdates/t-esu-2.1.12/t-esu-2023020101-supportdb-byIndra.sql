@@ -1,0 +1,1 @@
+UPDATE `umm_menu` SET `url`='support/support-ticket' WHERE  `id`=1050;

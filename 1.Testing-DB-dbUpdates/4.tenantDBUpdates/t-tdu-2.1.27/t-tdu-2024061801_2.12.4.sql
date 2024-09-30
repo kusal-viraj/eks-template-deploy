@@ -1,0 +1,82 @@
+----------------kavindu 2.12.4-------------------
+
+UPDATE `common_grid_column_template` SET `column_order`=1 WHERE `field`='checkbox' AND `grid_id`=13;
+UPDATE `common_grid_column_template` SET `column_order`=2 WHERE `field`='po.vendorId' AND `grid_id`=13;
+UPDATE `common_grid_column_template` SET `column_order`=3 WHERE `field`='po.poNumber' AND `grid_id`=13;
+UPDATE `common_grid_column_template` SET `column_order`=4 WHERE `field`='po.projectCodeId' AND `grid_id`=13;
+UPDATE `common_grid_column_template` SET `column_order`=5 WHERE `field`='po.netAmount' AND `grid_id`=13;
+UPDATE `common_grid_column_template` SET `column_order`=6 WHERE `field`='po.poDate' AND `grid_id`=13;
+UPDATE `common_grid_column_template` SET `column_order`=7 WHERE `field`='po.deliveryDate' AND `grid_id`=13;
+UPDATE `common_grid_column_template` SET `column_order`=8 WHERE `field`='po.createdByName' AND `grid_id`=13;
+UPDATE `common_grid_column_template` SET `column_order`=9 WHERE `field`='po.createdOn' AND `grid_id`=13;
+UPDATE `common_grid_column_template` SET `column_order`=10 WHERE `field`='po.status' AND `grid_id`=13;
+UPDATE `common_grid_column_template` SET `column_order`=11 WHERE `field`='po.vendorApprovalStatus' AND `grid_id`=13;
+UPDATE `common_grid_column_template` SET `column_order`=12 WHERE `field`='po.approvalUserName' AND `grid_id`=13;
+UPDATE `common_grid_column_template` SET `column_order`=13 WHERE `field`='po.approvalGroup' AND `grid_id`=13;
+UPDATE `common_grid_column_template` SET `column_order`=14 WHERE `field`='dept.id' AND `grid_id`=13;
+UPDATE `common_grid_column_template` SET `column_order`=15 WHERE `field`='po.exportStatus' AND `grid_id`=13;
+UPDATE `common_grid_column_template` SET `column_order`=16 WHERE `field`='po.exportedUser' AND `grid_id`=13;
+UPDATE `common_grid_column_template` SET `column_order`=17 WHERE `field`='po.exportedDate' AND `grid_id`=13;
+UPDATE `common_grid_column_template` SET `column_order`=60 WHERE `field`='action' AND `grid_id`=13;
+
+
+UPDATE `common_grid_column_template` SET `column_order`=1 WHERE `field`='checkbox' AND `grid_id`=14;
+UPDATE `common_grid_column_template` SET `column_order`=2 WHERE `field`='vendor.id' AND `grid_id`=14;
+UPDATE `common_grid_column_template` SET `column_order`=3 WHERE `field`='bill.billNo' AND `grid_id`=14;
+UPDATE `common_grid_column_template` SET `column_order`=4 WHERE `field`='bill.billDate' AND `grid_id`=14;
+UPDATE `common_grid_column_template` SET `column_order`=5 WHERE `field`='bill.billAmount' AND `grid_id`=14;
+UPDATE `common_grid_column_template` SET `column_order`=6 WHERE `field`='term.id' AND `grid_id`=14;
+UPDATE `common_grid_column_template` SET `column_order`=7 WHERE `field`='bill.dueDate' AND `grid_id`=14;
+UPDATE `common_grid_column_template` SET `column_order`=8 WHERE `field`='po.id' AND `grid_id`=14;
+UPDATE `common_grid_column_template` SET `column_order`=9 WHERE `field`='receipt.id' AND `grid_id`=14;
+UPDATE `common_grid_column_template` SET `column_order`=10 WHERE `field`='bill.submittedByName' AND `grid_id`=14;
+UPDATE `common_grid_column_template` SET `column_order`=11 WHERE `field`='bill.submittedOn' AND `grid_id`=14;
+UPDATE `common_grid_column_template` SET `column_order`=12 WHERE `field`='bill.balanceAmount' AND `grid_id`=14;
+UPDATE `common_grid_column_template` SET `column_order`=13 WHERE `field`='bill.discountAmount' AND `grid_id`=14;
+UPDATE `common_grid_column_template` SET `column_order`=14 WHERE `field`='bill.approvalUserName' AND `grid_id`=14;
+UPDATE `common_grid_column_template` SET `column_order`=15 WHERE `field`='bill.approvedDate' AND `grid_id`=14;
+UPDATE `common_grid_column_template` SET `column_order`=16 WHERE `field`='bill.status' AND `grid_id`=14;
+UPDATE `common_grid_column_template` SET `column_order`=17 WHERE `field`='bill.paymentStatus' AND `grid_id`=14;
+UPDATE `common_grid_column_template` SET `column_order`=18 WHERE `field`='bill.applicableDiscountAmount' AND `grid_id`=14;
+UPDATE `common_grid_column_template` SET `column_order`=19 WHERE `field`='bill.discountApplicableDate' AND `grid_id`=14;
+UPDATE `common_grid_column_template` SET `column_order`=20 WHERE `field`='bill.approvalGroup' AND `grid_id`=14;
+UPDATE `common_grid_column_template` SET `column_order`=21 WHERE `field`='dept.id' AND `grid_id`=14;
+UPDATE `common_grid_column_template` SET `column_order`=22 WHERE `field`='bill.paidAmount' AND `grid_id`=14;
+UPDATE `common_grid_column_template` SET `column_order`=23 WHERE `field`='bill.creditAmount' AND `grid_id`=14;
+UPDATE `common_grid_column_template` SET `column_order`=24 WHERE `field`='code.id' AND `grid_id`=14;
+UPDATE `common_grid_column_template` SET `column_order`=25 WHERE `field`='bill.accountPeriodMonth' AND `grid_id`=14;
+UPDATE `common_grid_column_template` SET `column_order`=26 WHERE `field`='bill.accountPeriodYear' AND `grid_id`=14;
+UPDATE `common_grid_column_template` SET `column_order`=27 WHERE `field`='bill.exportStatus' AND `grid_id`=14;
+UPDATE `common_grid_column_template` SET `column_order`=28 WHERE `field`='bill.exportedUser' AND `grid_id`=14;
+UPDATE `common_grid_column_template` SET `column_order`=29 WHERE `field`='bill.exportedDate' AND `grid_id`=14;
+UPDATE `common_grid_column_template` SET `column_order`=60 WHERE `field`='action' AND `grid_id`=14;
+
+
+UPDATE `common_grid_column_template` SET `column_order`=1 WHERE `field`='checkbox' AND `grid_id`=15;
+UPDATE `common_grid_column_template` SET `column_order`=2 WHERE `field`='expense.id' AND `grid_id`=15;
+UPDATE `common_grid_column_template` SET `column_order`=3 WHERE `field`='expense.reportName' AND `grid_id`=15;
+UPDATE `common_grid_column_template` SET `column_order`=4 WHERE `field`='dept.id' AND `grid_id`=15;
+UPDATE `common_grid_column_template` SET `column_order`=5 WHERE `field`='expense.createdByName' AND `grid_id`=15;
+UPDATE `common_grid_column_template` SET `column_order`=6 WHERE `field`='expense.employeeNo' AND `grid_id`=15;
+UPDATE `common_grid_column_template` SET `column_order`=7 WHERE `field`='expense.createdOn' AND `grid_id`=15;
+UPDATE `common_grid_column_template` SET `column_order`=8 WHERE `field`='expense.approvalUserName' AND `grid_id`=15;
+UPDATE `common_grid_column_template` SET `column_order`=9 WHERE `field`='appGroup.id' AND `grid_id`=15;
+UPDATE `common_grid_column_template` SET `column_order`=10 WHERE `field`='automation.id' AND `grid_id`=15;
+UPDATE `common_grid_column_template` SET `column_order`=11 WHERE `field`='expense.totalAmount' AND `grid_id`=15;
+UPDATE `common_grid_column_template` SET `column_order`=12 WHERE `field`='expense.balanceAmount' AND `grid_id`=15;
+UPDATE `common_grid_column_template` SET `column_order`=13 WHERE `field`='expense.paidAmount' AND `grid_id`=15;
+UPDATE `common_grid_column_template` SET `column_order`=14 WHERE `field`='expense.status' AND `grid_id`=15;
+UPDATE `common_grid_column_template` SET `column_order`=15 WHERE `field`='expense.startFrom' AND `grid_id`=15;
+UPDATE `common_grid_column_template` SET `column_order`=16 WHERE `field`='expense.endDate' AND `grid_id`=15;
+UPDATE `common_grid_column_template` SET `column_order`=17 WHERE `field`='expense.paymentStatus' AND `grid_id`=15;
+UPDATE `common_grid_column_template` SET `column_order`=18 WHERE `field`='expense.exportStatus' AND `grid_id`=15;
+UPDATE `common_grid_column_template` SET `column_order`=19 WHERE `field`='expense.exportedUser' AND `grid_id`=15;
+UPDATE `common_grid_column_template` SET `column_order`=20 WHERE `field`='expense.exportedDate' AND `grid_id`=15;
+UPDATE `common_grid_column_template` SET `column_order`=60 WHERE `field`='action' AND `grid_id`=15;
+
+DELETE FROM `common_grid_column_user_wice` WHERE `grid_id`=13;
+DELETE FROM `common_grid_column_user_wice` WHERE `grid_id`=14;
+DELETE FROM `common_grid_column_user_wice` WHERE `grid_id`=15;
+DELETE FROM `common_grid_state_user_wice` WHERE `grid_id`=13;
+DELETE FROM `common_grid_state_user_wice` WHERE `grid_id`=14;
+DELETE FROM `common_grid_state_user_wice` WHERE `grid_id`=15;

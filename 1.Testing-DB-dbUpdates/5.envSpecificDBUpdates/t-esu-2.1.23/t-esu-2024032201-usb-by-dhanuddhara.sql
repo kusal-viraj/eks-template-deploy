@@ -1,0 +1,1 @@
+UPDATE `tenant_wise_transaction` SET provider_id = 2 ;

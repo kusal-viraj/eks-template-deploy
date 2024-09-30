@@ -1,0 +1,1 @@
+DELETE FROM `payment_type_for_provider` where id = 101;

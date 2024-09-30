@@ -1,0 +1,4 @@
+----Kavindu--2.9.47--
+
+UPDATE `common_grid_column_template` SET `header`='Payment Type' WHERE `grid_id`=73 AND `field`='pPaymentReq.paymentType';
+UPDATE `common_grid_column_template` SET `header`='Payment Channel' WHERE `grid_id`=73 AND `field`='pPaymentReq.paymentChannel';

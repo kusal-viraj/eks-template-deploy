@@ -1,0 +1,1 @@
+UPDATE `papertrl_cloudflare_config` SET `create_dns_failed_notify_email`='systems@papertrl.com, chamin.w@papertrl.com, chaminweerasinghe@yahoo.com, amal.w@papertrl.com, bhagya.e@papertrl.com' WHERE `id`=1

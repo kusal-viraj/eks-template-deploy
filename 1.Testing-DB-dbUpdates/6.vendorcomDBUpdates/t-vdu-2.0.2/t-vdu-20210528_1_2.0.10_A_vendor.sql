@@ -1,0 +1,1 @@
+UPDATE `vendor_grid_column_template` SET `grid_id` = 1, `field` = 'rolem.createdOn', `header` = 'Created Date', `column_show` = 1, `is_sortable` = 1, `is_re_orderable` = 1, `is_re_sizable` = 1, `can_hide` = 1, `align` = 'left', `search_type` = 'date', `placeholder` = 'Created Date', `column_order` = 6, `drop_down_id` = NULL, `drop_down_url` = '' WHERE `id` = 95;

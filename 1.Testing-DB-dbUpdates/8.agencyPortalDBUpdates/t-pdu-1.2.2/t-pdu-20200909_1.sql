@@ -1,0 +1,1 @@
+UPDATE umm_menu SET portal_menu='1' WHERE id='22';

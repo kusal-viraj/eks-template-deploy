@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.8.0.final using JasperReports Library version 6.8.0-2ed8dfabb690ff337a5797129f2cd92902b0c87b  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="export_expence_csv" pageWidth="1684" pageHeight="1191" orientation="Landscape" columnWidth="1644" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="90d6112f-0490-4f0c-8a71-f0225ec2d92c">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="reportName" class="java.lang.String">
+		<fieldDescription><![CDATA[reportName]]></fieldDescription>
+	</field>
+	<field name="businessPurpose" class="java.lang.String">
+		<fieldDescription><![CDATA[businessPurpose]]></fieldDescription>
+	</field>
+	<field name="createdOn" class="java.util.Date">
+		<fieldDescription><![CDATA[createdOn]]></fieldDescription>
+	</field>
+	<field name="totalAmount" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[totalAmount]]></fieldDescription>
+	</field>
+	<field name="notes" class="java.lang.String">
+		<fieldDescription><![CDATA[notes]]></fieldDescription>
+	</field>
+	<field name="expenseDate" class="java.util.Date">
+		<fieldDescription><![CDATA[expenseDate]]></fieldDescription>
+	</field>
+	<field name="projectAccountCode" class="java.lang.String">
+		<fieldDescription><![CDATA[projectAccountCode]]></fieldDescription>
+	</field>
+	<field name="projectAccountCodeDescription" class="java.lang.String">
+		<fieldDescription><![CDATA[projectAccountCodeDescription]]></fieldDescription>
+	</field>
+	<field name="expenseAccountCode" class="java.lang.String">
+		<fieldDescription><![CDATA[expenseAccountCode]]></fieldDescription>
+	</field>
+	<field name="expenseAccountCodeDescription" class="java.lang.String">
+		<fieldDescription><![CDATA[expenseAccountCodeDescription]]></fieldDescription>
+	</field>
+	<field name="expenseType" class="java.lang.String">
+		<fieldDescription><![CDATA[expenseType]]></fieldDescription>
+	</field>
+	<field name="merchant" class="java.lang.String">
+		<fieldDescription><![CDATA[merchant]]></fieldDescription>
+	</field>
+	<field name="amount" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[amount]]></fieldDescription>
+	</field>
+	<field name="id" class="java.lang.Long">
+		<fieldDescription><![CDATA[id]]></fieldDescription>
+	</field>
+	<variable name="lineNumber" class="java.lang.Integer" resetType="Group" resetGroup="Group1" calculation="Sum">
+		<variableExpression><![CDATA[1]]></variableExpression>
+	</variable>
+	<group name="Group1">
+		<groupExpression><![CDATA[$F{id}]]></groupExpression>
+	</group>
+	<title>
+		<band height="30">
+			<staticText>
+				<reportElement mode="Opaque" x="-20" y="0" width="100" height="30" forecolor="#000000" backcolor="#FFFFFF" uuid="002382dc-0b60-42f9-b5e5-0f09f8b4b13b"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Report Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="80" y="0" width="150" height="30" backcolor="#FFFFFF" uuid="35f85352-f0bc-49ee-bcdc-62bc374a025f"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Business Purpose]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="230" y="0" width="50" height="30" backcolor="#FFFFFF" uuid="bb873c01-95fc-4382-ac6a-58ff4357f37f"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Submit Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="280" y="0" width="70" height="30" backcolor="#FFFFFF" uuid="52be0142-e904-45e8-8499-dc35f352c8d5">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total Amount]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="350" y="0" width="150" height="30" backcolor="#FFFFFF" uuid="005bad46-8bee-4da1-8480-55a5159896b8">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Notes]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="550" y="0" width="50" height="30" backcolor="#FFFFFF" uuid="9b203fe9-2eb3-4c0b-b311-a26c6f076f33"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Line Number]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="600" y="0" width="50" height="30" backcolor="#FFFFFF" uuid="c7f7877c-1c38-4aed-9bc6-db156ff971d8"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="650" y="0" width="100" height="30" backcolor="#FFFFFF" uuid="c4c121a8-f171-4ecf-a32f-6260ba7517fe">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Project / Task]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="750" y="0" width="140" height="30" backcolor="#FFFFFF" uuid="fc0d1ff2-d899-4794-8cac-9b1b76b507fe"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Project / Task Description]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="890" y="0" width="100" height="30" backcolor="#FFFFFF" uuid="2e96c059-9baa-4f36-b5b5-cb62b34ca478">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Expense/Client Account Combination]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="990" y="0" width="140" height="30" backcolor="#FFFFFF" uuid="6eb3119b-47a8-4394-8aa9-0acb9d2d937d"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Expense/Client Account Description]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="1130" y="0" width="75" height="30" backcolor="#FFFFFF" uuid="fe84f45c-d67c-4ad5-9e34-a0eba41c81cc">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Expense Type]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="1205" y="0" width="75" height="30" backcolor="#FFFFFF" uuid="af69ed10-bc5e-4586-b2c8-c2baac98e55b">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Merchant]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="1280" y="0" width="50" height="30" backcolor="#FFFFFF" uuid="529dea3d-e31d-426f-bfb4-26ec64dedff0"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Amount]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="500" y="0" width="50" height="30" backcolor="#FFFFFF" uuid="c6852528-4c95-4aeb-9ea4-50bde7d6a32d"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Report Number]]></text>
+			</staticText>
+		</band>
+	</title>
+	<detail>
+		<band height="32" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<textField isBlankWhenNull="true">
+				<reportElement x="-20" y="0" width="100" height="30" uuid="3aad7db4-7991-4d50-a087-bb93c1ed6ed0">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{reportName}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="80" y="0" width="150" height="30" uuid="b46cec0f-a7f5-4bc4-9788-f73d5a8acec2">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{businessPurpose}]]></textFieldExpression>
+			</textField>
+			<textField pattern="MM/dd/yyyy" isBlankWhenNull="true">
+				<reportElement x="230" y="0" width="50" height="30" uuid="043f0434-99ea-4a26-8266-d6c9f5a6551c">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{createdOn}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="280" y="0" width="70" height="30" uuid="ae3ab92a-3738-42be-bd59-12314fdd7a1b"/>
+				<textFieldExpression><![CDATA[$F{totalAmount}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="350" y="0" width="150" height="30" uuid="9bf6b79a-a168-4b6e-98e3-8a0b31b32980"/>
+				<textFieldExpression><![CDATA[$F{notes}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="990" y="0" width="140" height="30" uuid="f6db8339-fec3-4090-9051-3fb390ac4540">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{expenseAccountCodeDescription}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="1130" y="0" width="75" height="30" uuid="abeca97c-1682-4ae9-ab19-8b314d6eea46">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{expenseType}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="1205" y="0" width="75" height="30" uuid="b203da57-f1b4-4ee6-a064-29f9b4187a53"/>
+				<textFieldExpression><![CDATA[$F{merchant}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="550" y="0" width="50" height="30" uuid="f945513b-6f10-4822-9261-3499f7ffbc38">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$V{lineNumber}]]></textFieldExpression>
+			</textField>
+			<textField pattern="MM/dd/yyyy" isBlankWhenNull="true">
+				<reportElement x="600" y="0" width="50" height="30" uuid="931a193e-20c1-441f-a687-3e16f277653a"/>
+				<textFieldExpression><![CDATA[$F{expenseDate}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="MM/dd/yyyy" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToTallestObject" x="750" y="0" width="140" height="30" uuid="31342819-459a-4ec0-a9f1-f806f99ab879">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{projectAccountCodeDescription}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToTallestObject" x="650" y="0" width="100" height="30" uuid="042b4e86-c591-408d-b14f-14972ebb1693">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Top"/>
+				<textFieldExpression><![CDATA[$F{projectAccountCode}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="890" y="0" width="100" height="30" uuid="f94d1ef4-d017-45d4-ae76-24ee42f30a35">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{expenseAccountCode}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="1280" y="0" width="50" height="30" uuid="123568ba-1213-4611-b916-b1499c86ccd1">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{amount}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="500" y="0" width="50" height="30" uuid="489aba13-c7d8-4997-b581-a27a5dbf14a4">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{id}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

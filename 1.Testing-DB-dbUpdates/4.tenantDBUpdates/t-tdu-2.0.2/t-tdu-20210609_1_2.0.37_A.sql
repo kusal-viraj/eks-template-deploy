@@ -1,0 +1,3 @@
+UPDATE `common_automation_field` SET `document_type` = 2, `short_code` = 'purchaseOrderDetails.itemName', `field_name` = 'Item Name', `condition_enable` = 0, `action_enable` = 0, `show_hide_enable` = 1, `data_type` = 'text', `drop_down_id` = NULL, `drop_down_url` = NULL, `second_value` = 0 WHERE `id` = 43;
+UPDATE `common_automation_field` SET `document_type` = 2, `short_code` = 'purchaseOrderDetails.description', `field_name` = 'Description', `condition_enable` = 0, `action_enable` = 0, `show_hide_enable` = 1, `data_type` = 'text', `drop_down_id` = NULL, `drop_down_url` = NULL, `second_value` = 0 WHERE `id` = 83;
+

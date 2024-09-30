@@ -1,0 +1,1 @@
+UPDATE common_grid_column_template SET align = 'left' WHERE field LIKE '%status%' OR header LIKE '%status%';

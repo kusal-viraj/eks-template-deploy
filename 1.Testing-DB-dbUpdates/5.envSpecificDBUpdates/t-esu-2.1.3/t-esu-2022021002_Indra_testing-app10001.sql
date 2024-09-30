@@ -1,0 +1,1 @@
+UPDATE `vp_bill` SET `ocr_running_status`='F' WHERE `id`=3273;

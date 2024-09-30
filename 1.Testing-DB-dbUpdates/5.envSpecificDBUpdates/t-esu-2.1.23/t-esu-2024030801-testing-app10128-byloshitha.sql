@@ -1,0 +1,1 @@
+UPDATE vp_payment_v_card vc SET STATUS = 'D' WHERE vc.id IN (172,173.174);

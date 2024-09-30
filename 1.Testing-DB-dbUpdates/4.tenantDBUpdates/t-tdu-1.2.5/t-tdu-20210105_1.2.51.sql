@@ -1,0 +1,1 @@
+UPDATE `common_account_type` SET `short_name` = 'Accounts Receivable' WHERE `id` = 1;

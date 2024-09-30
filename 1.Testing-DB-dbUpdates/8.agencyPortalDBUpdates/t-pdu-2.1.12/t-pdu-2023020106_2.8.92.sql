@@ -1,0 +1,4 @@
+----loshitha----2.8.92-----------
+
+
+UPDATE `common_drop_down_url` SET url = '/role_management/sec_view_role_dropdown_v2?userId=0&isSearch=true' WHERE id = 1;

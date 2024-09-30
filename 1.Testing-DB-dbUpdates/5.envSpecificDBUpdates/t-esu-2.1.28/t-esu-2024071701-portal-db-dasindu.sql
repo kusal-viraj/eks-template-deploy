@@ -1,0 +1,2 @@
+UPDATE `vp_bill_approval_stamp_format` SET `active`=0 WHERE `format_name`='Default' AND `format_code`='DEFAULT';
+UPDATE `vp_bill_approval_stamp_format` SET `active`=1 WHERE `format_name`='TIDEWATER' AND `format_code`='TW';

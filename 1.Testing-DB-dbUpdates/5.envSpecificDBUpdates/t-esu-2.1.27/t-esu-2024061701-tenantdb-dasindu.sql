@@ -1,0 +1,2 @@
+UPDATE `vp_bill_csv_export_format` SET `active`=0 WHERE `format_name`='Default' AND `format_code`='DEFAULT';
+UPDATE `vp_bill_csv_export_format` SET `active`=1 WHERE `format_name`='Business Central' AND `format_code`='BC';

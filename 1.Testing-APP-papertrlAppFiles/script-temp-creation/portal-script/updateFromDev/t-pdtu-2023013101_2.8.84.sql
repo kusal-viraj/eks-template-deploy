@@ -1,0 +1,2 @@
+
+ALTER TABLE vp_payment_recipient_details RENAME TO vp_payment_recipient_detail;

@@ -1,0 +1,3 @@
+--------------Hashila---------2.1.116--------------
+
+INSERT INTO `common_grid_column_template` (`grid_id`, `field`, `header`, `column_show`, `is_sortable`, `is_re_orderable`, `is_re_sizable`, `can_hide`, `align`, `search_type`, `placeholder`, `column_order`, `drop_down_id`, `drop_down_url`) VALUES (33, 'txn.paymentStatus', 'Payment Status', 1, 0, 0, 0, 0, 'center', 'input', 'Payment Status', 7, NULL, '');

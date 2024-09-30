@@ -1,0 +1,1 @@
+UPDATE `vendor_notification_subscription_type` SET `status`='I' WHERE  `id`=5;

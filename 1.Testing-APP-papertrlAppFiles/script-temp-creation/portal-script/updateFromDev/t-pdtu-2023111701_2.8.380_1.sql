@@ -1,0 +1,1 @@
+UPDATE `umm_menu` SET `portal_menu`=0 WHERE  `id`=1029;

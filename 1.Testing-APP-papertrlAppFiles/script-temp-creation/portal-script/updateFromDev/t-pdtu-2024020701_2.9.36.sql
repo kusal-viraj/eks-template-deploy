@@ -1,0 +1,1 @@
+UPDATE `common_grid_column_template` SET `is_sortable`=0 WHERE `grid_id`=2 AND `field`='rolem.id';

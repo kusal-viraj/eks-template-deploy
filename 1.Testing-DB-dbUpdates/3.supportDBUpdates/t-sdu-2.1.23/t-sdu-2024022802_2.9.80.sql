@@ -1,0 +1,1 @@
+UPDATE common_grid_state_template SET column_widths='210,210,210,210,210,210,50' WHERE  id=10;

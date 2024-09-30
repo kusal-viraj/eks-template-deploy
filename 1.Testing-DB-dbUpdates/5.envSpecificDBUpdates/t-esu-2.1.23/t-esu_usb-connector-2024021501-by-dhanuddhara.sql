@@ -1,0 +1,1 @@
+UPDATE `payment_provider_for_customer` SET `company_id` = 'APIPAPERTR' WHERE `id` = 2;

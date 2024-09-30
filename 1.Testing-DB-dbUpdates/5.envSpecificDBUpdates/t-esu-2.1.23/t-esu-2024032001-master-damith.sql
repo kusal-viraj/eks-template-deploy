@@ -1,0 +1,1 @@
+UPDATE papertrl_inbox_config SET `status`='A' WHERE (`id`='1');

@@ -1,0 +1,1 @@
+UPDATE `umm_menu` SET `status` = 'A' WHERE `id` = 1048;

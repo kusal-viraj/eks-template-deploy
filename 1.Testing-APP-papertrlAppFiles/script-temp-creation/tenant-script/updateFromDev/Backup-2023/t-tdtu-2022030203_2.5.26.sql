@@ -1,0 +1,1 @@
+UPDATE `common_grid_column_template` SET `header` = 'Status', `placeholder` = 'Status' WHERE `id` = 115;

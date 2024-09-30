@@ -1,0 +1,1 @@
+UPDATE `umm_privilages` SET `text`='Enable Disable Feature' WHERE  `id`=115;

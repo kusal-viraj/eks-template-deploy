@@ -1,0 +1,1 @@
+UPDATE papertrl_trial_config SET sftp_server_id=1 WHERE  id=1;

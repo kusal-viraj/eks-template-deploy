@@ -1,0 +1,2 @@
+UPDATE `common_grid_column_user_wice` SET `header`='Payment Type' WHERE `grid_id`=73 AND `field`='pPaymentReq.paymentType';
+UPDATE `common_grid_column_user_wice` SET `header`='Payment Channel' WHERE `grid_id`=73 AND `field`='pPaymentReq.paymentChannel';

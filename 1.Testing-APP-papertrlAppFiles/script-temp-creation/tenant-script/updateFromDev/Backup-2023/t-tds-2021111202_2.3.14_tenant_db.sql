@@ -1,0 +1,1 @@
+UPDATE `common_grid_column_template` SET `id`='477', `grid_id`='46', `field`='dept.status', `header`='Status', `column_show`='1', `is_sortable`='1', `is_re_orderable`='1', `is_re_sizable`='1', `can_hide`='1', `align`='center', `search_type`='dropdown', `placeholder`='Status', `column_order`='7', `drop_down_id`='1', `drop_down_url`='' WHERE (`id`='477');

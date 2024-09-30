@@ -1,0 +1,1 @@
+UPDATE papertrl_master_tenant SET sftp_server_id ='2', sftp_host='10.20.21.175', sftp_password ='', sftp_privet_key_path ='/home/papertrl/Keys/Testing-sftp-papertrl-Key.pem' WHERE  id=10001;

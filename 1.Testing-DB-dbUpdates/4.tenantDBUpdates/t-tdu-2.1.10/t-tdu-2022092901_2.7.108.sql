@@ -1,0 +1,19 @@
+-----------Hashila------2.7.108--------------
+
+DROP TABLE IF EXISTS `common_payment_type`;
+DROP TABLE IF EXISTS `common_system_endpoint`;
+DROP TABLE IF EXISTS `common_user_log`;
+DROP TABLE IF EXISTS `support_attachment`;
+DROP TABLE IF EXISTS `support_audit_trail`;
+DROP TABLE IF EXISTS `vp_app_expense_wkflw_det`;
+DROP TABLE IF EXISTS `vp_app_invoice_wkflw_det`;
+DROP TABLE IF EXISTS `vp_app_opportunity_wkflw_det`;
+DROP TABLE IF EXISTS `vp_app_po_wkflw_det`;
+DROP TABLE IF EXISTS `vp_app_project_wkflw_det`;
+DROP TABLE IF EXISTS `vp_app_proposal_wkflw_det`;
+DROP TABLE IF EXISTS `vp_app_wkflw_mst`;
+DROP TABLE IF EXISTS `vp_bill_assignee`;
+DROP TABLE IF EXISTS `vp_bill_related_grn`;
+DROP TABLE IF EXISTS `vp_bill_temp`;
+DROP TABLE IF EXISTS `vp_check_mst`;
+DROP TABLE IF EXISTS `vp_credit_card_process_mst`;

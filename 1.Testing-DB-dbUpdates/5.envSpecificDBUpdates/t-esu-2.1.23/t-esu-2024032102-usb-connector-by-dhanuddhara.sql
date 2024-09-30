@@ -1,0 +1,1 @@
+Update `tenant_wise_transaction` set status = 'P' where payment_type = 1;

@@ -1,0 +1,6 @@
+INSERT INTO `common_account_type`( `name`, `short_name`, `short_name_no_space`, `short_name_underscore`) VALUES ( 'Unrestricted Net Assets', 'Unrestricted Net Assets', 'UnrestrictedNetAssets', 'UNRESTRICTED_NET_ASSERTS');
+INSERT INTO `common_account_type`( `name`, `short_name`, `short_name_no_space`, `short_name_underscore`) VALUES ( 'Temporarily Restricted Net Assets', 'Temporarily Restricted Net Assets', 'TemporarilyRestrictedNetAssets', 'TEMPORARILY_RESTRICTED_NET_ASSETS');
+INSERT INTO `common_account_type`( `name`, `short_name`, `short_name_no_space`, `short_name_underscore`) VALUES ( 'Permanently Restricted Net Assets', 'Permanently Restricted Net Assets', 'PermanentlyRestrictedNetAssets', 'PERMANENTLY_RESTRICTED_NET_ASSERTS');
+INSERT INTO `common_account_type`( `name`, `short_name`, `short_name_no_space`, `short_name_underscore`) VALUES ( 'New Assets', 'New Assets', 'NewAssets', 'NEW_ASSERTS');
+
+DELETE FROM `common_object_sync_date_time` WHERE tp_integration_mst_id = 27 AND object_type = 'OBJECT_TYPE_ACOUNT';

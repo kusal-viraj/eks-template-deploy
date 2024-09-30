@@ -1,0 +1,1 @@
+INSERT INTO `vendor_grid_column_template` (`grid_id`, `field`, `header`, `column_show`, `is_sortable`, `is_re_orderable`, `is_re_sizable`, `can_hide`, `align`, `search_type`, `placeholder`, `column_order`, `drop_down_id`, `drop_down_url`) VALUES ( '6', 'action', 'Action', '1', '0', '0', '0', '0', 'center', 'actionButton', '', '2', NULL, '');

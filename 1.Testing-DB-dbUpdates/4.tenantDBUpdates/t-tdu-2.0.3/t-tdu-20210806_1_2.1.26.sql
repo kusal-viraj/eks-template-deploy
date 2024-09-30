@@ -1,0 +1,11 @@
+INSERT INTO `common_integration_service_group`(`id`, `name`, `visibility`, `sort_order`) VALUES (14, 'Departments', 0, 14);
+INSERT INTO `common_integration_service`(`id`, `name`, `status`, `service_type`, `service_group_id`) VALUES (26, 'Push departments to', 'A', 1, 14);
+INSERT INTO `common_integration_service`(`id`, `name`, `status`, `service_type`, `service_group_id`) VALUES (27, 'Pull departments from', 'A', 2, 14);
+INSERT INTO `common_integration_system_service`(`system_id`, `service_id`) VALUES (1, 26);
+INSERT INTO `common_integration_system_service`(`system_id`, `service_id`) VALUES (1, 27);
+INSERT INTO `common_integration_system_service`(`system_id`, `service_id`) VALUES (2, 26);
+INSERT INTO `common_integration_system_service`(`system_id`, `service_id`) VALUES (2, 27);
+INSERT INTO `common_integration_system_service`(`system_id`, `service_id`) VALUES (3, 26);
+INSERT INTO `common_integration_system_service`(`system_id`, `service_id`) VALUES (3, 27);
+INSERT INTO `common_integration_system_service`(`system_id`, `service_id`) VALUES (4, 26);
+INSERT INTO `common_integration_system_service`(`system_id`, `service_id`) VALUES (4, 27);

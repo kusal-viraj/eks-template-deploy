@@ -1,0 +1,9 @@
+UPDATE `common_grid_column_template` SET `id`='207', `grid_id`='8', `field`='pdBill.activePayment', `header`='Active Payments', `column_show`='1', `is_sortable`='1', `is_re_orderable`='0', `is_re_sizable`='0', `can_hide`='0', `align`='right', `search_type`=' ', `placeholder`='Active Payments', `column_order`='19', `drop_down_id`=NULL, `drop_down_url`='' WHERE (`id`='207');
+UPDATE `common_grid_column_template` SET `id`='208', `grid_id`='8', `field`='pdBill.voidedPayment', `header`='Void Payments', `column_show`='1', `is_sortable`='1', `is_re_orderable`='0', `is_re_sizable`='0', `can_hide`='0', `align`='right', `search_type`=' ', `placeholder`='Void Payments', `column_order`='19', `drop_down_id`=NULL, `drop_down_url`='' WHERE (`id`='208');
+
+UPDATE `common_grid_column_template` SET `id`='211', `grid_id`='11', `field`='pPO.submittedPo', `header`='Number of Pending Purchase Orders', `column_show`='1', `is_sortable`='1', `is_re_orderable`='0', `is_re_sizable`='0', `can_hide`='0', `align`='right', `search_type`=' ', `placeholder`='Number of Pending Purchase Orders', `column_order`='19', `drop_down_id`=NULL, `drop_down_url`='' WHERE (`id`='211');
+UPDATE `common_grid_column_template` SET `id`='221', `grid_id`='31', `field`='pEx.submittedEr', `header`='Number of Pending Expense Reports', `column_show`='1', `is_sortable`='1', `is_re_orderable`='0', `is_re_sizable`='0', `can_hide`='0', `align`='right', `search_type`=' ', `placeholder`='Number of Pending Expense Reports', `column_order`='19', `drop_down_id`=NULL, `drop_down_url`='' WHERE (`id`='221');
+
+delete from common_grid_column_template where id=216;
+
+delete from common_grid_column_template where id=220;

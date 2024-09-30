@@ -1,0 +1,1 @@
+ALTER TABLE `umm_user_mst` DROP COLUMN `role_id`;

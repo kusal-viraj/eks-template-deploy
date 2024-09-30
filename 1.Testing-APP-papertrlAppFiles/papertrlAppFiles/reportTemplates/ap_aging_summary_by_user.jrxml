@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.8.0.final using JasperReports Library version 6.8.0-2ed8dfabb690ff337a5797129f2cd92902b0c87b  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ap_aging_summary_by_user" pageWidth="595" pageHeight="842" whenNoDataType="NoDataSection" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="e4559449-617b-46e5-9f2a-0988ab4e69c3">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="vendorName" class="java.lang.String">
+		<fieldDescription><![CDATA[vendorName]]></fieldDescription>
+	</field>
+	<field name="currentBillCount" class="java.lang.Long">
+		<fieldDescription><![CDATA[currentBillCount]]></fieldDescription>
+	</field>
+	<field name="currentBillAmountTotal" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[currentBillAmountTotal]]></fieldDescription>
+	</field>
+	<field name="lessThirtyBillCount" class="java.lang.Long">
+		<fieldDescription><![CDATA[lessThirtyBillCount]]></fieldDescription>
+	</field>
+	<field name="lessThirtyBillAmountTotal" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[lessThirtyBillAmountTotal]]></fieldDescription>
+	</field>
+	<field name="thirtyAndSixtyBillCount" class="java.lang.Long">
+		<fieldDescription><![CDATA[thirtyAndSixtyBillCount]]></fieldDescription>
+	</field>
+	<field name="thirtyAndSixtyBillAmountTotal" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[thirtyAndSixtyBillAmountTotal]]></fieldDescription>
+	</field>
+	<field name="sixtyAndNinetyBillCount" class="java.lang.Long">
+		<fieldDescription><![CDATA[sixtyAndNinetyBillCount]]></fieldDescription>
+	</field>
+	<field name="sixtyAndNinetyBillAmountTotal" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[sixtyAndNinetyBillAmountTotal]]></fieldDescription>
+	</field>
+	<field name="passDueBillCount" class="java.lang.Long">
+		<fieldDescription><![CDATA[passDueBillCount]]></fieldDescription>
+	</field>
+	<field name="passDueBillAmountTotal" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[passDueBillAmountTotal]]></fieldDescription>
+	</field>
+	<field name="userName" class="java.lang.String">
+		<fieldDescription><![CDATA[userName]]></fieldDescription>
+	</field>
+	<variable name="TOTAL_COUNT" class="java.lang.Long">
+		<variableExpression><![CDATA[$F{currentBillCount}+$F{lessThirtyBillCount}+$F{thirtyAndSixtyBillCount}+$F{sixtyAndNinetyBillCount}+$F{passDueBillCount}]]></variableExpression>
+	</variable>
+	<variable name="TOTAL_AMOUNT" class="java.math.BigDecimal">
+		<variableExpression><![CDATA[$F{currentBillAmountTotal}.add( $F{lessThirtyBillAmountTotal} ).add($F{thirtyAndSixtyBillAmountTotal}).add($F{sixtyAndNinetyBillAmountTotal}).add($F{passDueBillAmountTotal})]]></variableExpression>
+	</variable>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="64" splitType="Stretch">
+			<staticText>
+				<reportElement x="140" y="3" width="280" height="20" forecolor="#000000" uuid="4e230902-b818-4a84-9a7b-2e62be326199"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="13" isBold="false"/>
+				</textElement>
+				<text><![CDATA[AP Aging Summary Report - User wise]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="180" y="23" width="200" height="11" forecolor="#827E7E" uuid="759902e3-339d-472b-8f90-9860cba81c51"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[As at]]></text>
+			</staticText>
+			<textField pattern="MM/dd/yyyy">
+				<reportElement x="180" y="34" width="200" height="13" forecolor="#827E7E" backcolor="#FFFFFF" uuid="139d6c88-d6bf-4916-aef6-6243112657b2">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="styled">
+					<font size="7" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="49" width="100" height="15" forecolor="#FFFFFF" backcolor="#3BB2AC" uuid="ec44ed9b-54cb-48af-8cad-7c42efd7ccb4">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.25" lineColor="#999999"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[User]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="100" y="49" width="100" height="15" forecolor="#FFFFFF" backcolor="#3BB2AC" uuid="bc8320f9-d3c0-47cc-9ab8-cacc535495f3"/>
+				<box>
+					<pen lineWidth="0.25" lineColor="#999999"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Vendor Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="200" y="49" width="57" height="15" forecolor="#FFFFFF" backcolor="#3BB2AC" uuid="a3af7b93-5bc7-4aca-92c0-fd1605067030">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.25" lineColor="#999999"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Current Due]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="257" y="49" width="57" height="15" forecolor="#FFFFFF" backcolor="#3BB2AC" uuid="87cfbbe3-e2f6-4ac2-b68a-3e1f75b0d5a6">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.25" lineColor="#999999"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[<30]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="314" y="49" width="57" height="15" forecolor="#FFFFFF" backcolor="#3BB2AC" uuid="63725013-ff2a-44c8-98b9-5a069fcdf4f2">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.25" lineColor="#999999"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[30 - 60]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="371" y="49" width="57" height="15" forecolor="#FFFFFF" backcolor="#3BB2AC" uuid="313fffd2-afe2-4106-9106-60d38a7c4dcb">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.25" lineColor="#999999"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[60 - 90]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="428" y="49" width="57" height="15" forecolor="#FFFFFF" backcolor="#3BB2AC" uuid="232f7a45-f223-45bd-81cb-75a60df2519a">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.25" lineColor="#999999"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Over 90]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="485" y="49" width="70" height="15" forecolor="#FFFFFF" backcolor="#3BB2AC" uuid="08e54adb-6059-4ae6-b908-867c05036d5f"/>
+				<box>
+					<pen lineWidth="0.25" lineColor="#999999"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total]]></text>
+			</staticText>
+		</band>
+	</title>
+	<detail>
+		<band height="30" splitType="Stretch">
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToTallestObject" x="0" y="0" width="100" height="30" uuid="bb610427-3f9e-4089-8a87-75a20a0a7f84">
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.25" lineColor="#999999"/>
+					<topPen lineWidth="0.25" lineStyle="Solid" lineColor="#999999"/>
+					<leftPen lineWidth="0.25" lineStyle="Solid" lineColor="#999999"/>
+					<bottomPen lineWidth="0.25" lineStyle="Solid" lineColor="#999999"/>
+					<rightPen lineWidth="0.25" lineStyle="Solid" lineColor="#999999"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="6"/>
+					<paragraph leftIndent="3"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{userName}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToTallestObject" x="200" y="0" width="57" height="15" uuid="07c65f94-4d4d-4ff1-a189-76439a45fde0">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.25" lineColor="#999999"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{currentBillCount}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToTallestObject" x="257" y="0" width="57" height="15" uuid="a99b821f-c903-432c-a3e4-890a485d8188"/>
+				<box>
+					<pen lineWidth="0.25" lineColor="#999999"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{lessThirtyBillCount}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToTallestObject" x="314" y="0" width="57" height="15" uuid="b40ab035-8b2c-4b03-96de-632e14d0c0f8"/>
+				<box>
+					<pen lineWidth="0.25" lineColor="#999999"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{thirtyAndSixtyBillCount}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToTallestObject" x="371" y="0" width="57" height="15" uuid="a0ecc626-9f16-4765-8078-38db1a5ae20e"/>
+				<box>
+					<pen lineWidth="0.25" lineColor="#999999"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{sixtyAndNinetyBillCount}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToTallestObject" x="428" y="0" width="57" height="15" uuid="1a567226-50d5-4a3f-b22b-232ade8833ca"/>
+				<box>
+					<pen lineWidth="0.25" lineColor="#999999"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{passDueBillCount}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToTallestObject" x="485" y="0" width="70" height="15" uuid="b8f68392-a87d-4773-b06e-37581cb724e0">
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.25" lineColor="#999999"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7" isBold="true"/>
+					<paragraph rightIndent="3"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{TOTAL_COUNT}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="$ #,##0.00" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToTallestObject" x="200" y="15" width="57" height="15" uuid="ba176002-e3d3-4f8b-8bae-754fcfc43a70">
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.25" lineColor="#999999"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="7"/>
+					<paragraph rightIndent="3"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{currentBillAmountTotal}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="$ #,##0.00" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToTallestObject" x="257" y="15" width="57" height="15" uuid="2af085c6-9a47-4e67-9779-a8684a1907d8">
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.25" lineColor="#999999"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="7"/>
+					<paragraph rightIndent="3"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{lessThirtyBillAmountTotal}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="$ #,##0.00" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToTallestObject" x="314" y="15" width="57" height="15" uuid="00d2cc65-6ee4-4156-a2c8-df53d2bc5772">
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.25" lineColor="#999999"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="7"/>
+					<paragraph rightIndent="3"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{thirtyAndSixtyBillAmountTotal}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="$ #,##0.00" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToTallestObject" x="371" y="15" width="57" height="15" uuid="ba9317e3-bf6e-43f6-ada2-9ebf3a277739">
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.25" lineColor="#999999"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="7"/>
+					<paragraph rightIndent="3"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{sixtyAndNinetyBillAmountTotal}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="$ #,##0.00" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToTallestObject" x="428" y="15" width="57" height="15" uuid="1225adf5-9edf-4ebe-9a36-08945035d9a7">
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.25" lineColor="#999999"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="7"/>
+					<paragraph rightIndent="3"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{passDueBillAmountTotal}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="$ #,##0.00" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToTallestObject" x="485" y="15" width="70" height="15" uuid="a9cd6c5d-a859-4173-b463-88c7e5273d99">
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.25" lineColor="#999999"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="7" isBold="true"/>
+					<paragraph rightIndent="3"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{TOTAL_AMOUNT}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="100" y="0" width="100" height="30" uuid="6fc030f7-7609-429f-ac4c-c772f5c0a0c9">
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.25" lineStyle="Solid" lineColor="#999999"/>
+					<leftPen lineWidth="0.25" lineStyle="Solid" lineColor="#999999"/>
+					<bottomPen lineWidth="0.25" lineStyle="Solid" lineColor="#999999"/>
+					<rightPen lineWidth="0.25" lineStyle="Solid" lineColor="#999999"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="6"/>
+					<paragraph leftIndent="3"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{vendorName}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="28" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="38" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+	<noData>
+		<band height="22">
+			<staticText>
+				<reportElement x="80" y="2" width="400" height="18" uuid="890ae9b2-bf15-45bf-af21-1da5fa10b65c"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[No Data to Display]]></text>
+			</staticText>
+		</band>
+	</noData>
+</jasperReport>

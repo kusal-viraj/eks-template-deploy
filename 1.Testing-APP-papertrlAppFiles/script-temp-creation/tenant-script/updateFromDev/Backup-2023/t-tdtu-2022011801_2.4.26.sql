@@ -1,0 +1,1 @@
+DELETE FROM `common_grid_column_template` WHERE grid_id='10'  and field = 'company.tpCompanyId';

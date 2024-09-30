@@ -1,0 +1,1 @@
+UPDATE vp_payment_check SET status = 'C' WHERE id IN (214,213,212,208);

@@ -1,0 +1,4 @@
+ALTER TABLE common_document_ad_hoc_workflow_detail_config DROP COLUMN action_date;
+
+ALTER TABLE hst_vp_expense_workflow_detail_config DROP COLUMN action_date;
+

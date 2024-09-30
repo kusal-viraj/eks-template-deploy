@@ -1,0 +1,660 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.8.0.final using JasperReports Library version 6.8.0-2ed8dfabb690ff337a5797129f2cd92902b0c87b  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="cash_requirment" pageWidth="595" pageHeight="842" whenNoDataType="NoDataSection" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="e40ce4df-6bcf-450d-a6a1-b8c93aa16b7c">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<parameter name="PARAM_CR_COUNT" class="java.lang.Long">
+		<parameterDescription><![CDATA[PARAM_CR_COUNT]]></parameterDescription>
+	</parameter>
+	<parameter name="PARAM_CR_AMOUNT" class="java.math.BigDecimal">
+		<parameterDescription><![CDATA[PARAM_CR_AMOUNT]]></parameterDescription>
+	</parameter>
+	<parameter name="PARAM_CRLD_AMOUNT" class="java.math.BigDecimal">
+		<parameterDescription><![CDATA[PARAM_CRLD_AMOUNT]]></parameterDescription>
+	</parameter>
+	<parameter name="PARAM_DA_COUNT" class="java.lang.Long">
+		<parameterDescription><![CDATA[PARAM_DA_COUNT]]></parameterDescription>
+	</parameter>
+	<parameter name="PARAM_DA_AMOUNT" class="java.math.BigDecimal">
+		<parameterDescription><![CDATA[PARAM_DA_AMOUNT]]></parameterDescription>
+	</parameter>
+	<parameter name="PARAM_DW_COUNT" class="java.lang.Long">
+		<parameterDescription><![CDATA[PARAM_DW_COUNT]]></parameterDescription>
+	</parameter>
+	<parameter name="PARAM_DW_AMOUNT" class="java.math.BigDecimal">
+		<parameterDescription><![CDATA[PARAM_DW_AMOUNT]]></parameterDescription>
+	</parameter>
+	<parameter name="PARAM_PD_COUNT" class="java.lang.Long">
+		<parameterDescription><![CDATA[PARAM_PD_COUNT]]></parameterDescription>
+	</parameter>
+	<parameter name="PARAM_PD_AMOUNT" class="java.math.BigDecimal">
+		<parameterDescription><![CDATA[PARAM_PD_AMOUNT]]></parameterDescription>
+	</parameter>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="approverName" class="java.lang.String">
+		<fieldDescription><![CDATA[approverName]]></fieldDescription>
+	</field>
+	<field name="cashRequirementCount" class="java.lang.Long">
+		<fieldDescription><![CDATA[cashRequirementCount]]></fieldDescription>
+	</field>
+	<field name="cashRequirement" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[cashRequirement]]></fieldDescription>
+	</field>
+	<field name="discountAvaiableCount" class="java.lang.Long">
+		<fieldDescription><![CDATA[discountAvaiableCount]]></fieldDescription>
+	</field>
+	<field name="discountAvaiable" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[discountAvaiable]]></fieldDescription>
+	</field>
+	<field name="cashRequirementLessDiscount" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[cashRequirementLessDiscount]]></fieldDescription>
+	</field>
+	<field name="pastDueCount" class="java.lang.Long">
+		<fieldDescription><![CDATA[pastDueCount]]></fieldDescription>
+	</field>
+	<field name="pastDue" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[pastDue]]></fieldDescription>
+	</field>
+	<field name="dueThisWeekCount" class="java.lang.Long">
+		<fieldDescription><![CDATA[dueThisWeekCount]]></fieldDescription>
+	</field>
+	<field name="dueThisWeek" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[dueThisWeek]]></fieldDescription>
+	</field>
+	<field name="aging" class="java.lang.String">
+		<fieldDescription><![CDATA[aging]]></fieldDescription>
+	</field>
+	<variable name="VAR_DA_COUNT" class="java.lang.Long" calculation="Sum">
+		<variableExpression><![CDATA[$F{discountAvaiableCount}]]></variableExpression>
+	</variable>
+	<variable name="VAR_CR_COUNT" class="java.lang.Long" calculation="Sum">
+		<variableExpression><![CDATA[$F{cashRequirementCount}]]></variableExpression>
+	</variable>
+	<variable name="VAR_DW_COUNT" class="java.lang.Long" calculation="Sum">
+		<variableExpression><![CDATA[$F{dueThisWeekCount}]]></variableExpression>
+	</variable>
+	<variable name="VAR_PD_COUNT" class="java.lang.Long" calculation="Sum">
+		<variableExpression><![CDATA[$F{pastDueCount}]]></variableExpression>
+	</variable>
+	<variable name="VAR_CR_AMOUNT" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[$F{cashRequirement}]]></variableExpression>
+	</variable>
+	<variable name="VAR_CR_LD_AMOUNT" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[$F{cashRequirementLessDiscount}]]></variableExpression>
+	</variable>
+	<variable name="VAR_DA_AMOUNT" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[$F{discountAvaiable}]]></variableExpression>
+	</variable>
+	<variable name="VAR_DW_AMOUNT" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[$F{dueThisWeek}]]></variableExpression>
+	</variable>
+	<variable name="VAR_PD_AMOUNT" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[$F{pastDue}]]></variableExpression>
+	</variable>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="186" splitType="Stretch">
+			<staticText>
+				<reportElement x="180" y="3" width="200" height="20" forecolor="#000000" uuid="96369e10-0621-43eb-933f-85257e84b9af"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="13" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Cash Requirement Report]]></text>
+			</staticText>
+			<textField pattern="MM/dd/yyyy">
+				<reportElement x="180" y="34" width="200" height="13" forecolor="#827E7E" backcolor="#FFFFFF" uuid="38941599-6d20-4ac9-a304-f7bd2a3200fb">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="styled">
+					<font size="7" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="75" width="100" height="20" forecolor="#FFFFFF" backcolor="#3BB2AC" uuid="fec36dbe-deaa-4ec1-b2ef-33c46a458e86">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.25" lineColor="#999999"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Cash Requirement]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="100" y="75" width="100" height="20" forecolor="#FFFFFF" backcolor="#3BB2AC" uuid="b6f52ebc-8275-4ea9-a1f2-c9740251b00d">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.25" lineColor="#999999"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Cash Requirement 
+(less discounts)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="200" y="75" width="100" height="20" forecolor="#FFFFFF" backcolor="#3BB2AC" uuid="31adae10-43a7-4eb1-9953-3e1f8ba56d1a">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.25" lineColor="#999999"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Discounts Available]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="300" y="75" width="100" height="20" forecolor="#FFFFFF" backcolor="#3BB2AC" uuid="d4659bbd-6c96-43f0-900f-df983823a382">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.25" lineColor="#999999"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Current Due]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="400" y="75" width="100" height="20" forecolor="#FFFFFF" backcolor="#3BB2AC" uuid="93413863-acb9-45ea-b6f6-6c830bfbc85a">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.25" lineColor="#999999"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Past Due]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="0" y="95" width="100" height="15" uuid="1c763063-516a-48fe-9b44-4cd8b57df032">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.25" lineColor="#999999"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{PARAM_CR_COUNT}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="#,##0.00" isBlankWhenNull="true">
+				<reportElement x="0" y="110" width="100" height="15" uuid="931437f1-9aa2-4d69-998e-18d3e17087e0">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.25" lineColor="#999999"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="7"/>
+					<paragraph rightIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{PARAM_CR_AMOUNT}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="$ #,##0.00" isBlankWhenNull="true">
+				<reportElement x="100" y="110" width="100" height="15" uuid="9f5faf51-3a68-4fa6-968e-36f357d17274">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.25" lineColor="#999999"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="7"/>
+					<paragraph rightIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{PARAM_CRLD_AMOUNT}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="200" y="95" width="100" height="15" uuid="3ed583d3-9e58-45af-ae2b-436b82c5bd67">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.25" lineColor="#999999"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{PARAM_DA_COUNT}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="$ #,##0.00" isBlankWhenNull="true">
+				<reportElement x="200" y="110" width="100" height="15" uuid="9d0f1600-e8a3-4cf4-b737-8ef4c2d208aa">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.25" lineColor="#999999"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="7"/>
+					<paragraph rightIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{PARAM_DA_AMOUNT}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="300" y="95" width="100" height="15" uuid="1323500c-d2eb-43d6-9397-3781ef046853">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.25" lineColor="#999999"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{PARAM_DW_COUNT}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="$ #,##0.00" isBlankWhenNull="true">
+				<reportElement x="300" y="110" width="100" height="15" uuid="19a3ea93-c4a3-479c-a864-5c846a6b58a1">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.25" lineColor="#999999"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="7"/>
+					<paragraph rightIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{PARAM_DW_AMOUNT}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="400" y="95" width="100" height="15" uuid="a36672ac-e136-4ca0-a68a-1dd2f00b267b">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.25" lineColor="#999999"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{PARAM_PD_COUNT}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="$ #,##0.00" isBlankWhenNull="true">
+				<reportElement x="400" y="110" width="100" height="15" uuid="e94fe066-3083-4cbf-a6e2-2aa99bef9738">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.25" lineColor="#999999"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="7"/>
+					<paragraph rightIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{PARAM_PD_AMOUNT}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="55" width="549" height="15" backcolor="#E0F2F1" uuid="a1feaee8-d6dc-40d5-9547-37caa548f87f">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="7" isBold="true" isUnderline="false"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<text><![CDATA[Current Cash Requirement (Bills approved, not paid)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="180" y="23" width="200" height="11" forecolor="#827E7E" uuid="365ca42f-37f8-4dac-afbb-0f24026f57a2"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[As at]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="100" y="95" width="100" height="15" uuid="34d9eb27-1049-4c58-872e-6e19a91221c5">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.25" lineColor="#999999"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{PARAM_CR_COUNT}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="146" width="550" height="15" backcolor="#E0F2F1" uuid="6394b764-4e06-4b0c-a0d3-6f3b27f872eb">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="7" isBold="true" isUnderline="false"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<text><![CDATA[AP Summary]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="166" width="100" height="20" forecolor="#FFFFFF" backcolor="#3BB2AC" uuid="1c1b6aaf-0c6a-46e5-a6d2-9124636e3a25">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.25" lineColor="#999999"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Final Approver]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="100" y="166" width="100" height="20" forecolor="#FFFFFF" backcolor="#3BB2AC" uuid="7c7c94f9-3683-4b06-94b9-87fe6d68ef19">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.25" lineColor="#999999"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Cash Requirement]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="200" y="166" width="100" height="20" forecolor="#FFFFFF" backcolor="#3BB2AC" uuid="d6bf3a65-dbbc-40fc-a07a-0bbbf6054b12">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.25" lineColor="#999999"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Discounts Available]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="300" y="166" width="100" height="20" forecolor="#FFFFFF" backcolor="#3BB2AC" uuid="015d29ee-5edb-4f67-917d-368fbd0dd13d">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.25" lineColor="#999999"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Current Due]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="400" y="166" width="100" height="20" forecolor="#FFFFFF" backcolor="#3BB2AC" uuid="12424211-80b4-48cf-a2ec-15b0b585b62b">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.25" lineColor="#999999"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Past Due]]></text>
+			</staticText>
+		</band>
+	</title>
+	<detail>
+		<band height="30" splitType="Stretch">
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="0" y="0" width="100" height="30" uuid="bb3abd89-27af-408c-ac14-ae99d4bba92e">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.25" lineColor="#999999"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="7" isBold="true"/>
+					<paragraph leftIndent="3"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{approverName}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="100" y="0" width="100" height="15" uuid="7585515f-ef79-4a10-88bf-c3fa4254119b">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.25" lineColor="#999999"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{cashRequirementCount}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="$ #,##0.00" isBlankWhenNull="true">
+				<reportElement x="100" y="15" width="100" height="15" uuid="47e7ee24-8812-44c3-ae02-3815d015a4ca">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.25" lineColor="#999999"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="7"/>
+					<paragraph rightIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{cashRequirement}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="200" y="0" width="100" height="15" uuid="7d2266d8-219a-4136-96f6-9d29919588c0">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.25" lineColor="#999999"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{discountAvaiableCount}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="$ #,##0.00" isBlankWhenNull="true">
+				<reportElement x="200" y="15" width="100" height="15" uuid="525c6ef7-3ef3-4b7f-89a9-200954be52cf">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.25" lineColor="#999999"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="7"/>
+					<paragraph rightIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{discountAvaiable}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="300" y="0" width="100" height="15" uuid="be70bd88-db11-4fbc-9a54-25c048196437">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.25" lineColor="#999999"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{dueThisWeekCount}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="$ #,##0.00" isBlankWhenNull="true">
+				<reportElement x="300" y="15" width="100" height="15" uuid="c31e2e7a-7e05-4173-a653-dd7a771aa6b9">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.25" lineColor="#999999"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="7"/>
+					<paragraph rightIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{dueThisWeek}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="400" y="0" width="100" height="15" uuid="51b0a865-71b9-4446-8023-3f22e6eb2516">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.25" lineColor="#999999"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{pastDueCount}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="$ #,##0.00" isBlankWhenNull="true">
+				<reportElement x="400" y="15" width="100" height="15" uuid="c35a23e7-77b6-4c05-8e99-6dd11bf3a768">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.25" lineColor="#999999"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="7"/>
+					<paragraph rightIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{pastDue}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="501" y="0" width="50" height="30" uuid="9457c530-27b0-4e85-8ab1-42e19ccfc892">
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.25" lineColor="#FFFFFF"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7"/>
+					<paragraph leftIndent="3"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{aging}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<summary>
+		<band height="30">
+			<staticText>
+				<reportElement x="0" y="0" width="100" height="30" uuid="eab6b1b4-d219-4fc0-ae4e-87ec36bbf5c4">
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.25" lineColor="#999999"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="7" isBold="true"/>
+					<paragraph leftIndent="5" rightIndent="0"/>
+				</textElement>
+				<text><![CDATA[Total]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="100" y="0" width="100" height="15" uuid="c9865f01-0898-401b-96af-d32dd4446275">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.25" lineColor="#999999"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{VAR_CR_COUNT}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="$ #,##0.00" isBlankWhenNull="true">
+				<reportElement x="100" y="15" width="100" height="15" uuid="6fe51663-7918-445c-8fec-12f856e93a14">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.25" lineColor="#999999"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+					<paragraph rightIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{VAR_CR_AMOUNT}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="200" y="0" width="100" height="15" uuid="33e2ee9d-475b-4e80-95b2-682295ce83bc">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.25" lineColor="#999999"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{VAR_DA_COUNT}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="$ #,##0.00" isBlankWhenNull="true">
+				<reportElement x="200" y="15" width="100" height="15" uuid="396cfbef-fbf4-4358-a609-89e4ff48de0f">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.25" lineColor="#999999"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+					<paragraph rightIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{VAR_DA_AMOUNT}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="300" y="0" width="100" height="15" uuid="bf9135ef-f7d4-435c-ad10-49f520e53ab3">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.25" lineColor="#999999"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{VAR_DW_COUNT}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="$ #,##0.00" isBlankWhenNull="true">
+				<reportElement x="300" y="15" width="100" height="15" uuid="927ecf9a-d203-4569-aec1-b90dffe57333">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.25" lineColor="#999999"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+					<paragraph rightIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{VAR_DW_AMOUNT}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="400" y="0" width="100" height="15" uuid="6dfd6cf1-8023-465d-bd8c-435a385b2d8c">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.25" lineColor="#999999"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{VAR_PD_COUNT}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="$ #,##0.00" isBlankWhenNull="true">
+				<reportElement x="400" y="15" width="100" height="15" uuid="da20749f-6028-4c6b-be97-b2fa23269637">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.25" lineColor="#999999"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+					<paragraph rightIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{VAR_PD_AMOUNT}]]></textFieldExpression>
+			</textField>
+		</band>
+	</summary>
+	<noData>
+		<band height="25">
+			<staticText>
+				<reportElement x="80" y="6" width="400" height="18" uuid="d2e8b43e-a5f4-4860-abc2-47762444c755"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[No Data to Display]]></text>
+			</staticText>
+		</band>
+	</noData>
+</jasperReport>

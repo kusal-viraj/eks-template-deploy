@@ -1,0 +1,1 @@
+INSERT INTO `umm_role_previlege`(`role_id`, `privilege_id`, `created_by`, `created_on`) VALUES (1, 519, 'System', '2022-11-02 17:56:08');

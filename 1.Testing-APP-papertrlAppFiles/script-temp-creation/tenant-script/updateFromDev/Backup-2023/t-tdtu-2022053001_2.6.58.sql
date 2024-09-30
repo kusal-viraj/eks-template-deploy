@@ -1,0 +1,1 @@
+UPDATE `common_grid_column_template` SET `field`='sup.issueKey' WHERE  `id`=522;

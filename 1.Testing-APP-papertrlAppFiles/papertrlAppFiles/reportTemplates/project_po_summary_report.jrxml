@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.8.0.final using JasperReports Library version 6.8.0-2ed8dfabb690ff337a5797129f2cd92902b0c87b  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="project_purchase_orders_summary" pageWidth="930" pageHeight="570" orientation="Landscape" whenNoDataType="NoDataSection" columnWidth="890" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="0" uuid="9b6421db-0d6a-414d-a98c-cff2dc109066">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="report_project.xml"/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="poList" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource">
+		<fieldDescription><![CDATA[poList]]></fieldDescription>
+	</field>
+	<field name="amountInvoiced" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[amountInvoiced]]></fieldDescription>
+	</field>
+	<field name="remainingBudget" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[remainingBudget]]></fieldDescription>
+	</field>
+	<field name="projectNumber" class="java.lang.String">
+		<fieldDescription><![CDATA[projectNumber]]></fieldDescription>
+	</field>
+	<field name="amountIssued" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[amountIssued]]></fieldDescription>
+	</field>
+	<field name="budget" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[budget]]></fieldDescription>
+	</field>
+	<group name="projectGroup" minHeightToStartNewPage="75">
+		<groupExpression><![CDATA[$F{projectNumber}]]></groupExpression>
+		<groupHeader>
+			<band height="20">
+				<staticText>
+					<reportElement mode="Opaque" x="0" y="0" width="100" height="20" forecolor="#FFFFFF" backcolor="#3BB2AC" uuid="6beba4c2-b321-4b82-acc2-ec35307fcdbd"/>
+					<box>
+						<pen lineWidth="0.25" lineColor="#999999"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="7" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Project Number]]></text>
+				</staticText>
+				<staticText>
+					<reportElement mode="Opaque" x="100" y="0" width="100" height="20" forecolor="#FFFFFF" backcolor="#3BB2AC" uuid="3dcf06a9-ba00-4c42-9819-7f74a8f47602"/>
+					<box>
+						<pen lineWidth="0.25" lineColor="#999999"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="7" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Budget]]></text>
+				</staticText>
+				<staticText>
+					<reportElement mode="Opaque" x="200" y="0" width="100" height="20" forecolor="#FFFFFF" backcolor="#3BB2AC" uuid="fe3ac61c-5002-47a0-a19f-6c4c13ac4782"/>
+					<box>
+						<pen lineWidth="0.25" lineColor="#999999"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="7" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Amount Issued]]></text>
+				</staticText>
+				<staticText>
+					<reportElement mode="Opaque" x="300" y="0" width="100" height="20" forecolor="#FFFFFF" backcolor="#3BB2AC" uuid="7f7b9fce-0c34-498a-b1e0-2f1a7aa3d1af"/>
+					<box>
+						<pen lineWidth="0.25" lineColor="#999999"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="7" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Amount Invoiced]]></text>
+				</staticText>
+				<staticText>
+					<reportElement mode="Opaque" x="400" y="0" width="100" height="20" forecolor="#FFFFFF" backcolor="#3BB2AC" uuid="89edb5b8-c01f-4306-92f2-d6a93ef8dbaf"/>
+					<box>
+						<pen lineWidth="0.25" lineColor="#999999"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="7" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Remaining Budget]]></text>
+				</staticText>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band height="25">
+				<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				<property name="com.jaspersoft.studio.layout"/>
+				<subreport>
+					<reportElement x="14" y="0" width="500" height="20" isRemoveLineWhenBlank="true" uuid="d01e12fe-909f-47fe-901a-48fe80ca5a6e">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<printWhenExpression><![CDATA[null!=$F{poList}]]></printWhenExpression>
+					</reportElement>
+					<dataSourceExpression><![CDATA[$F{poList}]]></dataSourceExpression>
+					<subreportExpression><![CDATA["po_summary_sub_report.jasper"]]></subreportExpression>
+				</subreport>
+			</band>
+		</groupFooter>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="54">
+			<staticText>
+				<reportElement x="141" y="10" width="278" height="20" forecolor="#000000" uuid="946b7a2f-3be0-41c6-b30b-6537270684b2"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="15" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Project Purchase Orders Summary]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="180" y="30" width="200" height="11" forecolor="#827E7E" uuid="1222669b-0028-47d4-82fd-c4b3f2cea766"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[As at]]></text>
+			</staticText>
+			<textField pattern="MM/dd/yyyy">
+				<reportElement x="180" y="41" width="200" height="13" forecolor="#827E7E" backcolor="#FFFFFF" uuid="2d509bcc-788a-4283-b586-00534c8ca649">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="styled">
+					<font size="7" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.spreadsheet.SpreadsheetLayout"/>
+			<textField>
+				<reportElement x="0" y="0" width="100" height="20" uuid="ea2b0d29-4547-477e-82de-d8d28fba75e7"/>
+				<box padding="3">
+					<pen lineWidth="0.25" lineColor="#999999"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{projectNumber}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="100" y="0" width="100" height="20" uuid="ad0c675d-902c-4773-a2b5-406abeb263f4"/>
+				<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="3">
+					<pen lineWidth="0.25" lineColor="#999999"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{budget}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="200" y="0" width="100" height="20" uuid="74bdd89e-98a4-4b93-819b-f19b4b9eee13"/>
+				<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="3">
+					<pen lineWidth="0.25" lineColor="#999999"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{amountIssued}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="300" y="0" width="100" height="20" uuid="7956cc5d-dc52-4733-85d1-76dc6f389800"/>
+				<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="3">
+					<pen lineWidth="0.25" lineColor="#999999"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{amountInvoiced}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="400" y="0" width="100" height="20" uuid="e8d04617-0121-466c-ad6c-0c00a566f31e"/>
+				<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="3">
+					<pen lineWidth="0.25" lineColor="#999999"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{remainingBudget}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<noData>
+		<band height="23">
+			<staticText>
+				<reportElement x="80" y="3" width="400" height="18" uuid="422e0543-3b5f-4059-a34b-e435385ccf08"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[No Data to Display]]></text>
+			</staticText>
+		</band>
+	</noData>
+</jasperReport>

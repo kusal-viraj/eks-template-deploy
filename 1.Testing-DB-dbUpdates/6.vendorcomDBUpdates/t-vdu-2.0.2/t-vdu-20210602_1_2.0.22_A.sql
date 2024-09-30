@@ -1,0 +1,2 @@
+INSERT INTO `vendor_menu_privilage`(`id`, `menu_id`, `prililage_id`, `auth_code`, `created_by`, `created_on`, `update_by`, `update_on`, `delete_by`, `delete_on`) VALUES (34, 1002, 8, 'USERS_UPLOAD', 'System', '2021-04-01 00:34:39', NULL, NULL, NULL, NULL);
+INSERT INTO `vendor_menu_privilage`(`id`, `menu_id`, `prililage_id`, `auth_code`, `created_by`, `created_on`, `update_by`, `update_on`, `delete_by`, `delete_on`) VALUES (194, 1007, 3, 'PO_DETAIL_VIEW', 'System', '2021-06-02 16:42:39', NULL, NULL, NULL, NULL);

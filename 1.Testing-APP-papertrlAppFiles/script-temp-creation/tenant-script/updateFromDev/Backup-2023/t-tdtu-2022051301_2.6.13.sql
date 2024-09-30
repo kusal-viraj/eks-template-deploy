@@ -1,0 +1,2 @@
+UPDATE `common_grid_column_template` SET `search_type` = 'multiSelect' WHERE `field` = 'vi.vendorId' AND `grid_id` = 7;
+UPDATE `common_grid_column_user_wice` SET `search_type` = 'multiSelect' WHERE `field` = 'vi.vendorId' AND `grid_id` = 7;

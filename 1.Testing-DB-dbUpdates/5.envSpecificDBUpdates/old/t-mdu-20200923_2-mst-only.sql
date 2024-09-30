@@ -1,0 +1,1 @@
+UPDATE `tp_integration_system` SET `name`='QuickBooks' WHERE (`id`='6');

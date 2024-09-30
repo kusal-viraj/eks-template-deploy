@@ -1,0 +1,1 @@
+UPDATE common_audit_trial_status SET icon='pi pi-reply' WHERE id=18;

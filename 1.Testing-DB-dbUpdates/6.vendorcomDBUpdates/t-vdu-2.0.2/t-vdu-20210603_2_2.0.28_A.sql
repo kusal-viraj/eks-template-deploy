@@ -1,0 +1,11 @@
+INSERT INTO `vendor_grid_template` (`id`, `grid_name`) VALUES ('22', 'VENDOR_DASHBOARD_PO_LIST');
+
+INSERT INTO `vendor_grid_state_template` (`grid_id`, `start_from`, `total_rows`, `column_widths`) VALUES ('22', '0', '10', '100,210,210,210,210,210');
+
+
+INSERT INTO `vendor_grid_column_template` (`grid_id`, `field`, `header`, `column_show`, `is_sortable`, `is_re_orderable`, `is_re_sizable`, `can_hide`, `align`, `search_type`, `placeholder`, `column_order`, `drop_down_id`, `drop_down_url`) VALUES ('22', 'action', 'Action', '1', '0', '0', '0', '0', 'center', 'actionButton', '', '2', NULL, '');
+INSERT INTO `vendor_grid_column_template` (`grid_id`, `field`, `header`, `column_show`, `is_sortable`, `is_re_orderable`, `is_re_sizable`, `can_hide`, `align`, `search_type`, `placeholder`, `column_order`, `drop_down_id`, `drop_down_url`) VALUES ('22', 'po.tenantId', 'Customer', '1', '1', '1', '1', '1', 'left', 'multiSelect', 'All', '3', NULL, '');
+INSERT INTO `vendor_grid_column_template` (`grid_id`, `field`, `header`, `column_show`, `is_sortable`, `is_re_orderable`, `is_re_sizable`, `can_hide`, `align`, `search_type`, `placeholder`, `column_order`, `drop_down_id`, `drop_down_url`) VALUES ('22', 'po.poNumber', 'PO Number', '1', '1', '1', '1', '1', 'left', 'input', 'PO Number', '5', NULL, '');
+INSERT INTO `vendor_grid_column_template` (`grid_id`, `field`, `header`, `column_show`, `is_sortable`, `is_re_orderable`, `is_re_sizable`, `can_hide`, `align`, `search_type`, `placeholder`, `column_order`, `drop_down_id`, `drop_down_url`) VALUES ('22', 'po.poDate', 'Date', '1', '1', '1', '1', '1', 'center', 'date', 'Date', '7', NULL, '');
+INSERT INTO `vendor_grid_column_template` (`grid_id`, `field`, `header`, `column_show`, `is_sortable`, `is_re_orderable`, `is_re_sizable`, `can_hide`, `align`, `search_type`, `placeholder`, `column_order`, `drop_down_id`, `drop_down_url`) VALUES ('22', 'po.netAmount', 'Amount', '1', '1', '1', '1', '1', 'right', 'numeric', 'Amount', '6', NULL, '');
+INSERT INTO `vendor_grid_column_template` (`grid_id`, `field`, `header`, `column_show`, `is_sortable`, `is_re_orderable`, `is_re_sizable`, `can_hide`, `align`, `search_type`, `placeholder`, `column_order`, `drop_down_id`, `drop_down_url`) VALUES ('22', 'po.projectCode', 'Project', '1', '1', '1', '1', '1', 'left', 'input', 'Project', '4', NULL, '');

@@ -1,0 +1,61 @@
+--------------Hashila--------2.7.90--------------
+
+SET FOREIGN_KEY_CHECKS = 0;
+DROP TABLE IF EXISTS `ar_client_address`;
+DROP TABLE IF EXISTS `ar_client_category`;
+DROP TABLE IF EXISTS `ar_contract_type`;
+DROP TABLE IF EXISTS `ar_client_mst`;
+DROP TABLE IF EXISTS `ar_division`;
+DROP TABLE IF EXISTS `ar_oppartunity_project_location_info`;
+DROP TABLE IF EXISTS `ar_opportunity_additional_data`;
+DROP TABLE IF EXISTS `ar_opportunity_attachment`;
+DROP TABLE IF EXISTS `ar_opportunity_audit_trial`;
+DROP TABLE IF EXISTS `ar_opportunity`;
+DROP TABLE IF EXISTS `ar_opportunity_internal_info`;
+DROP TABLE IF EXISTS `ar_opportunity_size_standard_info`;
+DROP TABLE IF EXISTS `ar_opportunity_source`;
+DROP TABLE IF EXISTS `ar_opportunity_type`;
+DROP TABLE IF EXISTS `ar_partnership_type`;
+DROP TABLE IF EXISTS `ar_type_of_location`;
+DROP TABLE IF EXISTS `ar_set_aside`;
+DROP TABLE IF EXISTS `ar_proposal_employee_information`;
+DROP TABLE IF EXISTS `ar_proposal_audit_trial`;
+DROP TABLE IF EXISTS `ar_proposal_attachment`;
+DROP TABLE IF EXISTS `ar_proposal_additional_data`;
+DROP TABLE IF EXISTS `ar_proposal`;
+DROP TABLE IF EXISTS `ar_project_subcontractor_info`;
+DROP TABLE IF EXISTS `ar_project_partnership_detail`;
+DROP TABLE IF EXISTS `ar_project_employee_information`;
+DROP TABLE IF EXISTS `ar_project_audit_trial`;
+DROP TABLE IF EXISTS `ar_project_attachment`;
+DROP TABLE IF EXISTS `ar_project_additional_data`;
+DROP TABLE IF EXISTS `ar_project`;
+DROP TABLE IF EXISTS `ar_product_line`;
+DROP TABLE IF EXISTS `ar_type_of_work`;
+DROP TABLE IF EXISTS `ar_project_assignee_history`;
+DROP TABLE IF EXISTS `ar_proposal_assignee_history`;
+DROP TABLE IF EXISTS `common_attachment_type`;
+DROP TABLE IF EXISTS `common_employee`;
+DROP TABLE IF EXISTS `common_employee_import_issue`;
+DROP TABLE IF EXISTS `common_employee_import_mst`;
+DROP TABLE IF EXISTS `common_message`;
+SET FOREIGN_KEY_CHECKS = 1;
+
+INSERT INTO `common_automation_field`(`id`, `document_type`, `short_code`, `field_name`, `condition_enable`, `action_enable`, `show_hide_enable`, `show_hide_enable_default`, `data_type`, `drop_down_id`, `drop_down_url`, `second_value`, `max_length`, `notification_enable`) VALUES (112, 1, 'expenseAccountIdList', 'Account Number', 1, 0, 0, 0, 'int', NULL, '/common_service/sec_get_account_dropdown_list', 0, 0, 0);
+INSERT INTO `common_automation_field`(`id`, `document_type`, `short_code`, `field_name`, `condition_enable`, `action_enable`, `show_hide_enable`, `show_hide_enable_default`, `data_type`, `drop_down_id`, `drop_down_url`, `second_value`, `max_length`, `notification_enable`) VALUES (113, 1, 'itemIdList', 'Item Number', 1, 0, 0, 0, 'int', NULL, '/common_service/sec_get_item_dropdown_list_not_considering_vendor', 0, 0, 0);
+
+INSERT INTO `common_automation_field_condition`(`field_id`, `condition_id`) VALUES (112, 1);
+INSERT INTO `common_automation_field_condition`(`field_id`, `condition_id`) VALUES (112, 2);
+INSERT INTO `common_automation_field_condition`(`field_id`, `condition_id`) VALUES (113, 1);
+INSERT INTO `common_automation_field_condition`(`field_id`, `condition_id`) VALUES (113, 2);
+
+INSERT INTO `common_automation_field`(`id`, `document_type`, `short_code`, `field_name`, `condition_enable`, `action_enable`, `show_hide_enable`, `show_hide_enable_default`, `data_type`, `drop_down_id`, `drop_down_url`, `second_value`, `max_length`, `notification_enable`) VALUES (114, 2, 'expenseAccountIdList', 'Account Number', 1, 0, 0, 0, 'int', NULL, '/common_service/sec_get_account_dropdown_list', 0, 0, 0);
+INSERT INTO `common_automation_field`(`id`, `document_type`, `short_code`, `field_name`, `condition_enable`, `action_enable`, `show_hide_enable`, `show_hide_enable_default`, `data_type`, `drop_down_id`, `drop_down_url`, `second_value`, `max_length`, `notification_enable`) VALUES (115, 2, 'itemIdList', 'Item Number', 1, 0, 0, 0, 'int', NULL, '/common_service/sec_get_item_dropdown_list_not_considering_vendor', 0, 0, 0);
+INSERT INTO `common_automation_field`(`id`, `document_type`, `short_code`, `field_name`, `condition_enable`, `action_enable`, `show_hide_enable`, `show_hide_enable_default`, `data_type`, `drop_down_id`, `drop_down_url`, `second_value`, `max_length`, `notification_enable`) VALUES (116, 4, 'expenseAccountIdList', 'Account Number', 1, 0, 0, 0, 'int', NULL, '/common_service/sec_get_account_dropdown_list', 0, 0, 0);
+
+INSERT INTO `common_automation_field_condition`(`field_id`, `condition_id`) VALUES (114, 1);
+INSERT INTO `common_automation_field_condition`(`field_id`, `condition_id`) VALUES (114, 2);
+INSERT INTO `common_automation_field_condition`(`field_id`, `condition_id`) VALUES (115, 1);
+INSERT INTO `common_automation_field_condition`(`field_id`, `condition_id`) VALUES (115, 2);
+INSERT INTO `common_automation_field_condition`(`field_id`, `condition_id`) VALUES (116, 1);
+INSERT INTO `common_automation_field_condition`(`field_id`, `condition_id`) VALUES (116, 2);

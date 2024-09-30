@@ -1,0 +1,6 @@
+UPDATE `tp_integration_mst` SET `tp_environment` = 'Testing' WHERE `id` = 199;
+UPDATE `tp_integration_mst` SET `tp_environment` = 'Testing' WHERE `id` = 200;
+UPDATE `tp_integration_mst` SET `tp_environment` = 'Testing' WHERE `id` = 201;
+UPDATE `tp_integration_mst` SET `tp_environment` = 'Testing' WHERE `id` = 202;
+UPDATE `tp_integration_mst` SET `tp_environment` = 'Testing' WHERE `id` = 203;
+UPDATE `tp_integration_mst` SET `tp_environment` = 'Testing' WHERE `id` = 204;

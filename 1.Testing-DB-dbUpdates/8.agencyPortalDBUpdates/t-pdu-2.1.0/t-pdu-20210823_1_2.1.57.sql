@@ -1,0 +1,12 @@
+INSERT INTO `umm_menu` (`id`, `name`, `display_text`, `menu_style`, `url`, `tab`, `type`, `super_type`, `super_type_2`, `department`, `menu_order`, `display_icon`, `short_name`, `detail_text`, `status`, `portal_menu`, `individual_tenant_menu`, `vendor_community_menu`, `version`, `auth_code`, `slim_menu`, `hierachy`, `created_by`, `created_on`, `update_by`, `update_on`, `delete_by`, `delete_on`) VALUES (1028, 'Payment Configuration', 'Payment Configuration', 'fa fa-money', '/home/settings', '2', 'S', 1002, NULL, 'Admin', 12, 'fa fa-money', 'Payment Configuration', 'Payment Configuration', 'A', 0, 1, 0, 'V2', 'PAYMENT_CONFIGURATION', 0, '1002,1014', 'System', '2021-08-23 19:28:40', NULL, NULL, NULL, NULL);
+
+INSERT INTO `umm_privilages` (`id`, `url`, `text`, `auth_code`, `created_by`, `created_on`, `update_by`, `update_on`, `delete_by`, `delete_on`) VALUES (91, 'Contact Support Team', 'Contact Support Team', 'CONTACT_SUPPORT_TEAM', 'System', '2021-08-23 09:55:07', NULL, NULL, NULL, NULL);
+INSERT INTO `umm_privilages` (`id`, `url`, `text`, `auth_code`, `created_by`, `created_on`, `update_by`, `update_on`, `delete_by`, `delete_on`) VALUES (92, 'Configure Payment', 'Configure Payment', 'CONFIGURE_PAYMENT_ACTION', 'System', '2021-08-23 10:31:10', NULL, NULL, NULL, NULL);
+
+
+INSERT INTO `umm_menu_privilage` (`id`, `menu_id`, `privilage_id`, `auth_code`, `created_by`, `created_on`, `update_by`, `update_on`, `delete_by`, `delete_on`) VALUES (399, 1028, 91, 'CONTACT_SUPPORT_TEAM', 'System', '2021-08-23 10:26:16', NULL, NULL, NULL, NULL);
+INSERT INTO `umm_menu_privilage` (`id`, `menu_id`, `privilage_id`, `auth_code`, `created_by`, `created_on`, `update_by`, `update_on`, `delete_by`, `delete_on`) VALUES (400, 1028, 92, 'CONFIGURE_PAYMENT_ACTION', 'System', '2021-08-23 10:31:55', NULL, NULL, NULL, NULL);
+
+
+INSERT INTO `umm_role_previlege` (`role_id`, `privilege_id`, `sub_account_id`, `created_by`, `created_on`, `update_by`, `update_on`, `delete_by`, `delete_on`) VALUES (1, 399, NULL, 'admin', '2021-08-23 00:00:00', NULL, NULL, NULL, NULL);
+INSERT INTO `umm_role_previlege` (`role_id`, `privilege_id`, `sub_account_id`, `created_by`, `created_on`, `update_by`, `update_on`, `delete_by`, `delete_on`) VALUES (1, 400, NULL, 'admin', '2021-08-23 00:00:00', NULL, NULL, NULL, NULL);
